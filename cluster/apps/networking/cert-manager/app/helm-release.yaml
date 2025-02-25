@@ -11,7 +11,7 @@ spec:
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
-        name: cert-manager
+        name: jetstack-charts
         namespace: flux-system
       version: v1.17
   install:
