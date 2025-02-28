@@ -7,6 +7,7 @@ metadata:
     "kube-vip.io/loadbalancerIPs": "10.0.0.110"
 spec:
   type: LoadBalancer
+  loadBalancerIP: 10.0.0.110
   selector:
     app: longhorn-ui
   ports:
