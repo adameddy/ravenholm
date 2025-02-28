@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: lognhorn-lb
+  name: longhorn-lb
 spec:
   type: LoadBalancer
   selector:
-    app: longhorn-frontend
+    app: longhorn
   ports:
     - port: 8080
       targetPort: 80
