@@ -8,7 +8,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: longhorn
+    app: longhorn-frontend
   ports:
     - port: 80
       targetPort: 80
