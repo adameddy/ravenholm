@@ -4,8 +4,6 @@ kind: HelmRelease
 metadata:
   name: longhorn
   namespace: longhorn-system
-  labels:
-    app: longhorn
 spec:
   chart:
     spec:
