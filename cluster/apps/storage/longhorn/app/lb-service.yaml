@@ -9,7 +9,7 @@ spec:
   type: LoadBalancer
   loadBalancerIP: 10.0.0.110
   selector:
-    app: longhorn
+    app: longhorn-frontend
   ports:
     - port: 80
       targetPort: 80
