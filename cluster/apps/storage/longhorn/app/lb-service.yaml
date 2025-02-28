@@ -5,9 +5,9 @@ metadata:
   name: longhorn-service
 spec:
   selector:
-    app: longhorn-ui
+    app: longhorn
   ports:
-  - port: 3250
+  - port: 80
     targetPort: 80
   type: LoadBalancer
   annotations:
