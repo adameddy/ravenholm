@@ -5,7 +5,7 @@ metadata:
   name: longhorn-service
 spec:
   selector:
-    app: longhorn
+    app: longhorn-frontend
   ports:
   - port: 3250
     targetPort: 80
