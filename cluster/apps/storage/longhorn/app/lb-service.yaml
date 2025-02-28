@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: longhorn-lb
   namespace: longhorn-system
+  annotations:
+    "kube-vip.io/loadbalancerIPs": "10.0.0.110"
 spec:
   type: LoadBalancer
   selector:
@@ -10,5 +12,3 @@ spec:
   ports:
     - port: 80
       targetPort: 80
-  annotations:
-    "kube-vip.io/loadbalancerIPs": "10.0.0.110"
