@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/adameddy/ravenholm.git
     targetRevision: HEAD
-    path: cluster/base/applications
+    path: cluster/base/argocd/applications
     directory:
       recurse: true
   destination:
