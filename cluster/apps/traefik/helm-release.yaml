@@ -14,4 +14,3 @@ spec:
         name: traefik
         namespace: flux-system
       interval: 6h
-      releaseName: traefik
