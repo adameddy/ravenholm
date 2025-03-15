@@ -4,7 +4,7 @@ metadata:
   name: nginx-ingress
   namespace: nginx
   annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    cert-manager.io/cluster-issuer: letsencrypt-production
 spec:
   rules:
     - host: nginx.staging.ravenholm.io
