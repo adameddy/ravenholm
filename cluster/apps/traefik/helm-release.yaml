@@ -20,3 +20,4 @@ spec:
         redirections:
           entryPoint:
             to: websecure
+            scheme: https
