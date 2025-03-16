@@ -17,3 +17,5 @@ spec:
                 name: nginx
                 port:
                   number: 80
+  tls:
+    secretName: nginx-certificate-secret
