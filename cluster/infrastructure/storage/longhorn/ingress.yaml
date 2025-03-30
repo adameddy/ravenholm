@@ -18,7 +18,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-    - host: longhorn.ravenholm.io
+    - host: longhorn.staging.ravenholm.io
       http:
         paths:
           - path: /
