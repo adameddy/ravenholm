@@ -7,7 +7,7 @@ metadata:
     cert-manager.io/cluster-issuer: letsencrypt-production
 spec:
   rules:
-    - host: nginx.staging.ravenholm.io
+    - host: nginx.k3s.ravenholm.io
       http:
         paths:
           - path: /

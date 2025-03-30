@@ -18,7 +18,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-    - host: longhorn.staging.ravenholm.io
+    - host: longhorn.k3s.ravenholm.io
       http:
         paths:
           - path: /
@@ -28,3 +28,5 @@ spec:
                 name: longhorn-frontend
                 port:
                   number: 80
+  tls:
+    - secretName: nginx-certificate-secret
