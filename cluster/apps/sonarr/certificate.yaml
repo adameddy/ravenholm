@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: sonarr-ingress-certificate
+  namespace: sonarr
+spec:
+  secretName: sonarr-certificate-secret
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  dnsNames: 
+    - sonarr.k3s.ravenholm.io
