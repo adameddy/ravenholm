@@ -1,9 +1,9 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
-  name: sonarr
-  namespace: sonarr
+  name: traefik
+  namespace: flux-system
 spec:
   interval: 30m
-  url: https://bjw-s.github.io/helm-charts
+  url: https://traefik.github.io/charts
   timeout: 3m
