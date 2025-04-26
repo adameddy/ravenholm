@@ -15,9 +15,16 @@ spec:
         namespace: flux-system
       interval: 6h
   values:
+    defaultPodOptions:
+      securityContext:
+        runAsUser: 568
+        runAsGroup: 568
+        fsGroup: 568
+        fsGroupChangePolicy: OnRootMismatch
+        supplementalGroups:
+          - 100
     controllers:
       main:
-        type: statefulset
         annotations:
           reloader.stakater.com/auto: 'true'
         containers:
@@ -26,3 +33,8 @@ spec:
               repository: ghcr.io/onedr0p/sonarr-develop
               tag: 4.0.11.2743@sha256:7227b81844d1aa6cb8242b325eb30f9113d10c2fc446db4ca7207c892e49e72b
               pullPolicy: Always
+    persistence:
+      configold:
+        enabled: true
+        existingClaim: sonarr-config-volume
+        type: persistentVolumeClaim
