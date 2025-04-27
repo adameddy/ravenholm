@@ -40,9 +40,6 @@ spec:
             env:
               RADARR__AUTH__METHOD: External
               RADARR__AUTH__REQUIRED: DisabledForLocalAddresses
-            envFrom:
-              - secretRef:
-                  name: radarr
             securityContext:
               allowPrivilegeEscalation: false
               readOnlyRootFilesystem: true
