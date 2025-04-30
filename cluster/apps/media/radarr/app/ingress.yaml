@@ -6,6 +6,7 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
 spec:
+  ingressClassName: traefik
   rules:
     - host: radarr.k3s.ravenholm.io
       http:
