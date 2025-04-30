@@ -70,6 +70,21 @@ spec:
           http:
             port: *port
         type: ClusterIP
+    ingress:
+      app:
+        className: traefik
+        hosts:
+          - host: radarr.k3s.ravenholm.io
+            paths:
+              - path: /
+                pathtype: Prefix
+                service:
+                  identifier: app
+                  port: http
+        tls:
+          - hosts:
+            - radarr.k3s.ravenholm.io
+            secretName: radarr-certificate-secret
     persistence:
       config:
         existingClaim: radarr-config-volume
