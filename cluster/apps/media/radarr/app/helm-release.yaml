@@ -23,7 +23,7 @@ spec:
       retries: 3
   values:
     controllers:
-      main:
+      app:
         pod:
           securityContext:
             runAsNonRoot: true
@@ -65,7 +65,7 @@ spec:
                 memory: 1Gi
     service:
       app:
-        controller: main
+        controller: app
         ports:
           http:
             port: *port
