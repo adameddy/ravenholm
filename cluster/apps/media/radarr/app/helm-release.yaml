@@ -87,3 +87,9 @@ spec:
     persistence:
       config:
         existingClaim: radarr-config-volume
+      media:
+        type: nfs
+        server: ${FS-01_ADDR}
+        path: ${NFS_MOVIES_PATH}
+        globalMounts:
+          - path: /media

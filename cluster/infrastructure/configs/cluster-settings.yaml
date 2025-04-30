@@ -5,3 +5,6 @@ metadata:
   name: cluster-settings
 data:
   DOMAIN: "k3s.ravenholm.io"
+  FS-01_ADDR: "10.0.0.10"
+  FS-02_ADDR: "10.0.0.20"
+  NFS_MOVIES_PATH: "/mnt/md2/movies"
