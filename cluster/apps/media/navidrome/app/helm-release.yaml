@@ -29,6 +29,8 @@ spec:
             image:
               repository: deluan/navidrome
               tag: 0.55.2
+            env:
+              ND_DATAFOLDER: /config
             securityContext:
               allowPrivilegeEscalation: false
               readOnlyRootFilesystem: true
@@ -77,8 +79,6 @@ spec:
       config:
         enabled: true
         existingClaim: navidrome-config-volume
-        globalMounts:
-          - path: /data
       music:
         type: nfs
         server: 10.0.0.20
