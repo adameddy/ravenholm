@@ -75,9 +75,9 @@ spec:
             secretName: navidrome-certificate-secret
     persistence:
       config:
+        enabled: true
         existingClaim: navidrome-config-volume
-        globalMounts:
-          - path: /data
+        mountPath: /data
       music:
         type: nfs
         server: 10.0.0.20
