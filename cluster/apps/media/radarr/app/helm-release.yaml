@@ -89,7 +89,7 @@ spec:
         existingClaim: radarr-config-volume
       media:
         type: nfs
-        server: 10.0.0.10
-        path: /mnt/md2/movies
+        server: 10.0.0.20
+        path: /mnt/zpool1/movies
         globalMounts:
           - path: /media
