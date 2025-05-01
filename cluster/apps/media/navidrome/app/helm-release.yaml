@@ -52,7 +52,7 @@ spec:
         controller: navidrome
         ports:
           http:
-            port: *port
+            port: 4533
         type: ClusterIP
     ingress:
       app:
