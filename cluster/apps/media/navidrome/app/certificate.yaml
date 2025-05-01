@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: navidrome-ingress-certificate
+  namespace: media
+spec:
+  secretName: navidrome-certificate-secret
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  dnsNames: 
+    - navidrome.k3s.ravenholm.io
