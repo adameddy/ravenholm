@@ -90,6 +90,6 @@ spec:
       media:
         type: nfs
         server: 10.0.0.20
-        path: /mnt/zpool1/movies
+        path: /mnt/zpool2/movies
         globalMounts:
           - path: /media
