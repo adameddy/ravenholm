@@ -1,0 +1,95 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: sonarr
+  namespace: media
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: app-template
+      version: 3.7.3
+      sourceRef:
+        kind: HelmRepository
+        name: bjw-s
+        namespace: flux-system
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      strategy: rollback
+      retries: 3
+  values:
+    controllers:
+      sonarr:
+        pod:
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 568
+            runAsGroup: 568
+            fsGroup: 568
+            fsGroupChangePolicy: OnRootMismatch
+            seccompProfile: { type: RuntimeDefault }
+        containers:
+          app:
+            image:
+              repository: ghcr.io/home-operations/sonarr
+              tag: 4.0.14.2938@sha256:acd5416ab9c36d017687820a32f09d09a4e25a5754aa5ebeae2e7c63d7609c13
+            env:
+              sonarr__AUTH__METHOD: External
+              sonarr__AUTH__REQUIRED: DisabledForLocalAddresses
+            securityContext:
+              allowPrivilegeEscalation: false
+              readOnlyRootFilesystem: true
+              capabilities: { drop: ["ALL"] }
+            probes:
+              liveness: &probes
+                enabled: true
+                custom: true
+                spec:
+                  httpGet:
+                    path: /ping
+                    port: &port 8989
+                  initialDelaySeconds: 0
+                  periodSeconds: 10
+                  timeoutSeconds: 1
+                  failureThreshold: 3
+              readiness: *probes
+            resources:
+              requests:
+                cpu: 200m
+                memory: 500Mi
+              limits:
+                memory: 1Gi
+    service:
+      app:
+        controller: sonarr
+        ports:
+          http:
+            port: *port
+        type: ClusterIP
+    ingress:
+      app:
+        className: traefik
+        hosts:
+          - host: sonarr.k3s.ravenholm.io
+            paths:
+              - path: /
+                service:
+                  identifier: app
+                  port: http
+        tls:
+          - hosts:
+            - sonarr.k3s.ravenholm.io
+            secretName: sonarr-certificate-secret
+    persistence:
+      config:
+        existingClaim: sonarr-config-volume
+      media:
+        type: nfs
+        server: 10.0.0.20
+        path: /mnt/zpool2/tv-shows
+        globalMounts:
+          - path: /media
