@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: sabnzbd-ingress-certificate
+  namespace: media
+spec:
+  secretName: sabnzbd-certificate-secret
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  dnsNames: 
+    - sabnzbd.k3s.ravenholm.io
