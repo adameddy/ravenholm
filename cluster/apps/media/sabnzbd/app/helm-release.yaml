@@ -21,6 +21,15 @@ spec:
     remediation:
       strategy: rollback
       retries: 3
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: kubernetes.io/hostname
+            operator: In
+            values:
+            - k3s-agent-02
   values:
     controllers:
       sabnzbd:
