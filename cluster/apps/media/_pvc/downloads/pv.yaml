@@ -7,9 +7,4 @@ spec:
     storage: 1Mi
   accessModes:
     - ReadWriteMany
-  persistentVolumeReclaimPolicy: Retain
-  csi:
-    driver: driver.longhorn.io
-    fsType: ext4
-    volumeAttributes:
-      numberOfReplicas: '1'
+  persistentVolumeReclaimPolicy: Delete
