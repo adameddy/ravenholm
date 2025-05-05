@@ -92,3 +92,7 @@ spec:
     persistence:
       config:
         existingClaim: sabnzbd-config-volume
+      temp:
+        existingClaim: sabnzbd-temp
+        globalMounts:
+          - path: /temp
