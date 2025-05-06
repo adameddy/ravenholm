@@ -93,3 +93,9 @@ spec:
         path: /mnt/zpool2/movies
         globalMounts:
           - path: /media
+      downloads:
+        type: nfs
+        server: 10.0.0.20
+        path: /mnt/zpool2/temp/downloads
+        globalMounts:
+          - path: /downloads
