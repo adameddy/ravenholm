@@ -6,3 +6,4 @@ resources:
   - traefik.yaml
   - bjw-s.yaml
   - node-feature-discovery.yaml
+  - intel.yaml
