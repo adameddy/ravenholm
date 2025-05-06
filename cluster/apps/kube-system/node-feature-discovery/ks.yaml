@@ -11,7 +11,7 @@ spec:
   path: ./cluster/apps/kube-system/node-feature-discovery/app
   sourceRef:
     kind: GitRepository
-    name: home-kubernetes
+    name: flux-system
   prune: true
   wait: false
   interval: 30m
@@ -33,7 +33,7 @@ spec:
   path: ./cluster/apps/kube-system/node-feature-discovery/rules
   sourceRef:
     kind: GitRepository
-    name: home-kubernetes
+    name: flux-system
   prune: true
   wait: false
   interval: 30m
