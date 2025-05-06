@@ -4,7 +4,7 @@ metadata:
   name: downloads-volume
   namespace: media
 spec:
-  storageClassName: longhorn
+  storageClassName: longhorn-rwx
   volumeMode: Block
   accessModes:
     - ReadWriteMany
