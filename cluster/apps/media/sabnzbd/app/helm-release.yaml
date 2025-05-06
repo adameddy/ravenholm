@@ -101,3 +101,8 @@ spec:
     persistence:
       config:
         existingClaim: sabnzbd-config-volume
+      downloads:
+        enabled: true
+        existingClaim: downloads-volume
+        globalMounts:
+          - path: /data
