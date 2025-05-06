@@ -1,7 +1,7 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: &app downloads
+  name: &app downloads-volume
   namespace: flux-system
 spec:
   targetNamespace: media
