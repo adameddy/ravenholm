@@ -1,0 +1,101 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: jellyfin
+  namespace: media
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: app-template
+      version: 3.7.3
+      sourceRef:
+        kind: HelmRepository
+        name: bjw-s
+        namespace: flux-system
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      strategy: rollback
+      retries: 3
+  values:
+    controllers:
+      jellyfin:
+        pod:
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 568
+            runAsGroup: 568
+            fsGroup: 568
+            fsGroupChangePolicy: OnRootMismatch
+            seccompProfile: { type: RuntimeDefault }
+            supplementalGroups: [44, 109, 10000]
+        containers:
+          app:
+            image:
+              repository: jellyfin/jellyfin
+              tag: 10.10.7@sha256:7ae36aab93ef9b6aaff02b37f8bb23df84bb2d7a3f6054ec8fc466072a648ce2
+            env:
+              TZ: America/Denver
+            securityContext:
+              allowPrivilegeEscalation: false
+              readOnlyRootFilesystem: true
+              capabilities: { drop: ["ALL"] }
+            probes:
+              liveness: &probes
+                enabled: true
+                custom: true
+                spec:
+                  httpGet:
+                    path: /health
+                    port: &port 8096
+                  initialDelaySeconds: 0
+                  periodSeconds: 10
+                  timeoutSeconds: 1
+                  failureThreshold: 3
+              readiness: *probes
+            resources:
+              requests:
+                cpu: 200m
+                memory: 1Gi
+              limits:
+                memory: 8Gi
+    service:
+      app:
+        controller: jellyfin
+        ports:
+          http:
+            port: *port
+        type: ClusterIP
+    ingress:
+      app:
+        className: traefik
+        hosts:
+          - host: jellyfin.k3s.ravenholm.io
+            paths:
+              - path: /
+                service:
+                  identifier: app
+                  port: http
+        tls:
+          - hosts:
+            - jellyfin.k3s.ravenholm.io
+            secretName: jellyfin-certificate-secret
+    persistence:
+      config:
+        existingClaim: jellyfin-config-volume
+      movies:
+        type: nfs
+        server: 10.0.0.20
+        path: /mnt/zpool2/movies
+        globalMounts:
+          - path: /movies
+      tv-shows:
+        type: nfs
+        server: 10.0.0.20
+        path: /mnt/zpool2/tv-shows
+        globalMounts:
+          - path: /tv-shows
