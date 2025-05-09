@@ -29,7 +29,7 @@ spec:
     kubelet:
       enabled: false
     kubeApiServer:
-      enabled: true
+      enabled: false
       serviceMonitor:
         metricRelabelings:
           # Drop high cardinality labels
@@ -40,7 +40,7 @@ spec:
             sourceLabels: ["__name__"]
             regex: (apiserver_response_sizes_bucket|apiserver_watch_events_sizes_bucket)
     kubeControllerManager:
-      enabled: true
+      enabled: false
       endpoints: &cp
         - 10.0.0.111
         - 10.0.0.112
@@ -52,16 +52,16 @@ spec:
             sourceLabels: ["__name__"]
             regex: "(apiserver_audit|apiserver_client|apiserver_delegated|apiserver_envelope|apiserver_storage|apiserver_webhooks|attachdetach_controller|authenticated_user|authentication|cronjob_controller|disabled_metric|endpoint_slice|ephemeral_volume|garbagecollector_controller|get_token|go|hidden_metric|job_controller|kubernetes_build|kubernetes_feature|leader_election|node_collector|node_ipam|process_cpu|process_max|process_open|process_resident|process_start|process_virtual|pv_collector|registered_metric|replicaset_controller|rest_client|retroactive_storageclass|root_ca|running_managed|scrape_duration|scrape_samples|scrape_series|service_controller|storage_count|storage_operation|ttl_after|volume_operation|workqueue)_(.+)"
     kubeEtcd:
-      enabled: true
+      enabled: false
       endpoints: *cp
     kubeScheduler:
-      enabled: true
+      enabled: false
       endpoints: *cp
     kubeProxy:
       enabled: false
     prometheus:
       ingress:
-        enabled: true
+        enabled: false
         ingressClassName: "traefik"
         hosts: ["prometheus.k3s.ravenholm.io"]
         pathType: Prefix
@@ -107,7 +107,7 @@ spec:
               sourceLabels: ["__meta_kubernetes_pod_node_name"]
               targetLabel: kubernetes_node
     kubeStateMetrics:
-      enabled: true
+      enabled: false
     kube-state-metrics:
       fullnameOverride: kube-state-metrics
       metricLabelsAllowlist:
