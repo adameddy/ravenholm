@@ -22,3 +22,10 @@ spec:
     crds: CreateReplace
     remediation:
       retries: 3
+  values:
+    grafana:
+      additionalDataSources:
+        - name: Loki
+          type: loki
+          url: http://loki-gateway.monitor.svc.cluster.local
+          access: proxy
