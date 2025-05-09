@@ -34,3 +34,10 @@ metadata:
   labels:
     app.kubernetes.io/component: web
 ---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: monitor
+  labels:
+    app.kubernetes.io/component: monitor
+---

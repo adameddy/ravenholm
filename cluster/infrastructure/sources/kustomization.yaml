@@ -7,3 +7,5 @@ resources:
   - bjw-s.yaml
   - node-feature-discovery.yaml
   - intel.yaml
+  - grafana.yaml
+  - prometheus-community.yaml
