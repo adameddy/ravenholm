@@ -21,3 +21,8 @@ spec:
     remediation:
       strategy: rollback
       retries: 3
+  values:
+    ingress:
+      enabled: true
+      ingressClassName: traefik
+      hosts: ["grafana.k3s.ravenholm.io"]
