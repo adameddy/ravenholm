@@ -49,7 +49,7 @@ spec:
                 memory: 1Gi
     service:
       app:
-        controller: sonarr
+        controller: home-assistant
         ports:
           http:
             port: 8123
