@@ -10,3 +10,4 @@ resources:
   - grafana.yaml
   - prometheus-community.yaml
   - bitwarden.yaml
+  - external-secrets.yaml
