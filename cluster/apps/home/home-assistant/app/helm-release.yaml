@@ -70,7 +70,7 @@ spec:
             secretName: home-assistant-certificate-secret
     persistence:
       config:
-        existingClaim: home-assistant
+        existingClaim: home-assistant-config-volume
       logs:
         type: emptyDir
         globalMounts:
