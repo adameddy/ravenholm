@@ -1,11 +1,12 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: bitwarden-secrets-manager-tls
-  namespace: external-secrets
+  name: bitwarden-bootstrap-certificate
+  namespace: cert-manager
 spec:
-  secretName: bitwarden-secrets-manager-tls
-  commonName: bitwarden-sdk-server.external-secrets.svc.cluster.local
+  commonName: cert-manager-bitwarden-tls
+  isCA: true
+  secretName: bitwarden-tls-certs
   dnsNames:
     - bitwarden-sdk-server.external-secrets.svc.cluster.local
     - external-secrets-bitwarden-sdk-server.external-secrets.svc.cluster.local
