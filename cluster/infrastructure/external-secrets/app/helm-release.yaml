@@ -18,7 +18,7 @@ spec:
     image:
       repository: ghcr.io/external-secrets/external-secrets
     bitwarden-sdk-server:
-      enabled: true
+      enabled: false
     certController:
       image:
         repository: ghcr.io/external-secrets/external-secrets
