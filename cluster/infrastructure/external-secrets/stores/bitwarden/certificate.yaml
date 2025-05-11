@@ -2,6 +2,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: bitwarden-secrets-manager-tls
+  namespace: external-secrets
 spec:
   secretName: bitwarden-secrets-manager-tls
   commonName: bitwarden-sdk-server.external-secrets.svc.cluster.local
@@ -17,5 +18,5 @@ spec:
     encoding: PKCS8
     size: 2048
   issuerRef:
-    name: bitwarden-certificate-issuer
+    name: letsencrypt-production
     kind: ClusterIssuer
