@@ -37,6 +37,12 @@ spec:
             image:
               repository: ghcr.io/home-operations/home-assistant
               tag: 2025.5.1@sha256:020eecfb33fbc8473a54d24607e0352d4381af51d9963cfa70b7b915115da2d1
+            env:
+              HOME_ASSISTANT_EXTERNAL_URL: https://home-assistant.k3s.ravenholm.io
+              HOME_ASSISTANT_PURGE_KEEP_DAYS: 30
+              HOME_ASSISTANT_TRUSTED_PROXIES: 10.0.0.0/8
+              HOME_ASSISTANT_UNIT_SYSTEM: us_customary
+              TZ: America/Denver
             securityContext:
               allowPrivilegeEscalation: false
               readOnlyRootFilesystem: true
