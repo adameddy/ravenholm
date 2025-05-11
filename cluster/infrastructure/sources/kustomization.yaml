@@ -9,3 +9,4 @@ resources:
   - intel.yaml
   - grafana.yaml
   - prometheus-community.yaml
+  - bitwarden.yaml
