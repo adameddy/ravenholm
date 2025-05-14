@@ -4,4 +4,4 @@ resources:
   - ./certificate.yaml
   - ./clustersecretstore.yaml
   - ./clusterissuer.yaml
-  - ./externalsecret.yaml
+#  - ./externalsecret.yaml
