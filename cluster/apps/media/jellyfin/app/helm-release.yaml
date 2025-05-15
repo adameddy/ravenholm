@@ -34,7 +34,7 @@ spec:
             seccompProfile: { type: RuntimeDefault }
             supplementalGroups: [44, 109, 992, 10000]
           nodeSelector:
-            gpu.intel.com/device-id.0300-4680.present: 'true'
+            intel.feature.node.kubernetes.io/gpu: "true"
         containers:
           app:
             image:
@@ -61,11 +61,11 @@ spec:
               readiness: *probes
             resources:
               requests:
-                #gpu.intel.com/i915: 1
+                gpu.intel.com/i915: 1
                 cpu: 200m
                 memory: 1Gi
               limits:
-                #gpu.intel.com/i915: 1
+                gpu.intel.com/i915: 1
                 memory: 8Gi
     service:
       app:
