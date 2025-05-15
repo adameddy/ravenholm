@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: frigate-ingress-certificate
+  namespace: home
+spec:
+  secretName: frigate-certificate-secret
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  dnsNames: 
+    - frigate.k3s.ravenholm.io
