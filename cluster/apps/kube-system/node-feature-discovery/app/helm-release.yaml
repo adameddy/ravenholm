@@ -27,11 +27,4 @@ spec:
     worker:
       config:
         core:
-          sources: [custom, pci, usb]
-        sources:
-          custom:
-            - name: intel-gpu
-              matchOn:
-                - pciId:
-                    class: ["0300"]
-                    vendor: ["8086"]
+          sources: [pci, usb]
