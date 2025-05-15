@@ -6,7 +6,7 @@ spec:
   rules:
     - name: google.coral
       labels:
-        feature.node.kubernetes.io/custom-google-coral: "true"
+        google.feature.node.kubernetes.io/coral: "true"
       matchFeatures:
         - feature: pci.device
           matchExpressions:

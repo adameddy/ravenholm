@@ -6,7 +6,7 @@ spec:
   rules:
     - name: zooz.zwave
       labels:
-        feature.node.kubernetes.io/zwave: "true"
+        zooz.feature.node.kubernetes.io/zwave: "true"
       matchFeatures:
         - feature: usb.device
           matchExpressions:
