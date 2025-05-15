@@ -4,5 +4,6 @@ resources:
   - ./helm-release.yaml
 configMapGenerator:
   - name: frigate-configmap
+    namespace: home
     files:
       - config.yml=./config/config.yml
