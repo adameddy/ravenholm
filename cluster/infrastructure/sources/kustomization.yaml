@@ -11,3 +11,4 @@ resources:
   - prometheus-community.yaml
   - bitwarden.yaml
   - external-secrets.yaml
+  - staker-charts.yaml
