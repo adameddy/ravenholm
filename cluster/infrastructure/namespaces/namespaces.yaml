@@ -47,11 +47,3 @@ metadata:
   name: home
   labels:
     app.kubernetes.io/component: home
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: external-secrets
-  labels:
-    app.kubernetes.io/component: external-secrets
----
