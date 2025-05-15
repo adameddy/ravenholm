@@ -26,8 +26,8 @@ spec:
       frigate:
         annotations:
           configmap.reloader.stakater.com/reload: frigate-config
-        pod:
-          nodeSelector:
+        #pod:
+          #nodeSelector:
             #feature.node.kubernetes.io/custom-google-coral: "true"
             #intel.feature.node.kubernetes.io/gpu: "true"
         containers:
