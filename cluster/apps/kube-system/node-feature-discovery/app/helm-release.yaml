@@ -27,7 +27,7 @@ spec:
     worker:
       config:
         core:
-          sources: [custom, system, pci, usb, kernel]
+          sources: [custom, pci, usb]
         sources:
           custom:
             - name: intel-gpu
