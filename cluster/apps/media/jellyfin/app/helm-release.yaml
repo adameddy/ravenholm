@@ -61,11 +61,11 @@ spec:
               readiness: *probes
             resources:
               requests:
-                gpu.intel.com/i915: 1
+                #gpu.intel.com/i915: 1
                 cpu: 200m
                 memory: 1Gi
               limits:
-                gpu.intel.com/i915: 1
+                #gpu.intel.com/i915: 1
                 memory: 8Gi
     service:
       app:
