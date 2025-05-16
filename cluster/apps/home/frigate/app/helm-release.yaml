@@ -25,7 +25,7 @@ spec:
     controllers:
       frigate:
         annotations:
-          configmap.reloader.stakater.com/reload: frigate-config
+          reloader.stakater.com/auto: 'true'
         #pod:
           #nodeSelector:
             #feature.node.kubernetes.io/custom-google-coral: "true"
@@ -35,7 +35,9 @@ spec:
             image:
               repository: ghcr.io/blakeblackshear/frigate
               tag: 0.15.1@sha256:c4e02d2c511847eebbda8e0e370b41c78e7b51247353de79340e06c3e95f11be
-            #env:
+            env:
+              SECRET_FRIGATE_FRONTDOOR_LOW_URL: ${SECRET_FRIGATE_FRONTDOOR_LOW_URL}
+              SECRET_FRIGATE_FRONTDOOR_HIGH_URL: ${SECRET_FRIGATE_FRONTDOOR_HIGH_URL}
               #LIBVA_DRIVER_NAME: i965
             probes:
               liveness: &probes
@@ -43,7 +45,7 @@ spec:
                 custom: true
                 spec:
                   httpGet:
-                    path: /api/version
+                    path: /
                     port: &port 5000
                   initialDelaySeconds: 0
                   periodSeconds: 10
