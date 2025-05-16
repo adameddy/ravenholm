@@ -3,8 +3,10 @@ mqtt:
 
 go2rtc:
   streams:
-      front_door_low_res: {SECRET_FRIGATE_FRONTDOOR_LOW_URL}
-      front_door_high_res: {SECRET_FRIGATE_FRONTDOOR_HIGH_URL}
+      front_door_low_res:
+        - rtsp://admin:4C$3DugQBRPT@10.0.0.205/Preview_01_sub
+      front_door_high_res:
+        - rtsp://admin:4C$3DugQBRPT@10.0.0.205/Preview_01_main
 
 cameras:
   front_door:
