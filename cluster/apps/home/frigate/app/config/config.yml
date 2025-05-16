@@ -1,11 +1,27 @@
 mqtt:
   enabled: False
 
+go2rtc:
+  streams:
+      front_door_low_res: "{SECRET_FRIGATE_FRONTDOOR_LOW_URL}"
+      front_door_high_res: "{SECRET_FRIGATE_FRONTDOOR_HIGH_URL}"
+
 cameras:
-  dummy_camera:
-    enabled: False
+  front_door:
+    enabled: True
     ffmpeg:
       inputs:
-        - path: rtsp://127.0.0.1:554/rtsp
+        # High Resolution
+        - path: rtsp://127.0.0.1:8554/front_door_high_res
+          input_args: preset-rtsp-restream
           roles:
             - detect
+        # Low Resolution
+        - path: rtsp://127.0.0.1:8554/front_door_low_res
+          input_args: preset-rtsp-restream
+          roles:
+            - detect
+    detect:
+      width: 640
+      height: 480
+      fps: 5
