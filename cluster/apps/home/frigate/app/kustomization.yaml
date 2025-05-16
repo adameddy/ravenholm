@@ -7,3 +7,5 @@ configMapGenerator:
     namespace: home
     files:
       - config.yml=./config/config.yml
+generatorOptions:
+  disableNameSuffixHash: true
