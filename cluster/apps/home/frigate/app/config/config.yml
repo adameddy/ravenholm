@@ -11,11 +11,6 @@ cameras:
     enabled: True
     ffmpeg:
       inputs:
-        # High Resolution
-        - path: rtsp://127.0.0.1:8554/front_door_high_res
-          input_args: preset-rtsp-restream
-          roles:
-            - detect
         # Low Resolution
         - path: rtsp://127.0.0.1:8554/front_door_low_res
           input_args: preset-rtsp-restream
