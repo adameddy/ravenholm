@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - ./helm-release.yaml
   - ./certificate.yaml
+  - ./config-pvc.yaml
 configMapGenerator:
   - name: frigate-configmap
     namespace: home
