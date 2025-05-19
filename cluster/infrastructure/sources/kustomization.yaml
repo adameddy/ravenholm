@@ -10,3 +10,4 @@ resources:
   - grafana.yaml
   - prometheus-community.yaml
   - staker-charts.yaml
+  - external-secrets.yaml
