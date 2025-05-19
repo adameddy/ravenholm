@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
   - secret.sops.yaml
   - cluster-settings.yaml
-  - ./cert-manager/kustomization.yaml
+  - /cert-manager/kustomization.yaml
