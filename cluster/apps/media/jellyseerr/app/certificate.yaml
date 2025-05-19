@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: jellyseerr-ingress-certificate
+  namespace: media
+spec:
+  secretName: jellyseerr-certificate-secret
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  dnsNames: 
+    - jellyseerr.k3s.ravenholm.io
