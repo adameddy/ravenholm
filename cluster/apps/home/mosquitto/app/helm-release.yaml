@@ -50,7 +50,7 @@ spec:
       app:
         className: traefik
         hosts:
-          - host: mosquitto.k3s.ravenholm.io
+          - host: mosquitto.${DOMAIN}
             paths:
               - path: /
                 service:
@@ -58,7 +58,7 @@ spec:
                   port: http
         tls:
           - hosts:
-            - mosquitto.k3s.ravenholm.io
+            - mosquitto.${DOMAIN}
             secretName: mosquitto-certificate-secret
     persistence:
       config:

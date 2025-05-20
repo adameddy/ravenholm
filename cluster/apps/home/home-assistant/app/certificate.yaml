@@ -9,4 +9,4 @@ spec:
     name: letsencrypt-production
     kind: ClusterIssuer
   dnsNames: 
-    - home-assistant.k3s.ravenholm.io
+    - home-assistant.${DOMAIN}
