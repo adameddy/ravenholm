@@ -65,6 +65,9 @@ spec:
         ports:
           http:
             port: *port
+          rtsp:
+            port: 8554
+            enabled: true
         type: ClusterIP
     ingress:
       app:
