@@ -74,7 +74,7 @@ spec:
       app:
         className: traefik
         hosts:
-          - host: sonarr.k3s.ravenholm.io
+          - host: sonarr.${DOMAIN}
             paths:
               - path: /
                 service:
@@ -82,20 +82,20 @@ spec:
                   port: http
         tls:
           - hosts:
-            - sonarr.k3s.ravenholm.io
+            - sonarr.${DOMAIN}
             secretName: sonarr-certificate-secret
     persistence:
       config:
         existingClaim: sonarr-config-volume
       media:
         type: nfs
-        server: 10.0.0.20
+        server: ${FS2_ADDR}
         path: /mnt/zpool2/tv-shows
         globalMounts:
           - path: /media
       downloads:
         type: nfs
-        server: 10.0.0.20
+        server: ${FS2_ADDR}
         path: /mnt/zpool2/temp/downloads
         globalMounts:
           - path: /downloads

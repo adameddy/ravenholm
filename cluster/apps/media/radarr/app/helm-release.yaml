@@ -74,7 +74,7 @@ spec:
       app:
         className: traefik
         hosts:
-          - host: radarr.k3s.ravenholm.io
+          - host: radarr.${DOMAIN}
             paths:
               - path: /
                 service:
@@ -82,20 +82,20 @@ spec:
                   port: http
         tls:
           - hosts:
-            - radarr.k3s.ravenholm.io
+            - radarr.${DOMAIN}
             secretName: radarr-certificate-secret
     persistence:
       config:
         existingClaim: radarr-config-volume
       media:
         type: nfs
-        server: 10.0.0.20
+        server: ${FS2_ADDR}
         path: /mnt/zpool2/movies
         globalMounts:
           - path: /media
       downloads:
         type: nfs
-        server: 10.0.0.20
+        server: ${FS2_ADDR}
         path: /mnt/zpool2/temp/downloads
         globalMounts:
           - path: /downloads

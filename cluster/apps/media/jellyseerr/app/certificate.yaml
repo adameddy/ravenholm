@@ -9,4 +9,4 @@ spec:
     name: letsencrypt-production
     kind: ClusterIssuer
   dnsNames: 
-    - jellyseerr.k3s.ravenholm.io
+    - jellyseerr.${DOMAIN}
