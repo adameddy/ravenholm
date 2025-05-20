@@ -9,4 +9,4 @@ spec:
     name: letsencrypt-production
     kind: ClusterIssuer
   dnsNames: 
-    - navidrome.k3s.ravenholm.io
+    - navidrome.${DOMAIN}

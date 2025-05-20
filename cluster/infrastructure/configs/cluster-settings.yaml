@@ -4,5 +4,6 @@ metadata:
   namespace: flux-system
   name: cluster-settings
 data:
+  TIMEZONE: America/Denver
   FS1_ADDR: "10.0.0.10"
   FS2_ADDR: "10.0.0.20"

@@ -43,10 +43,9 @@ spec:
               ND_SCANSCHEDULE: "@every 1h"
               ND_SESSIONTIMEOUT: 24h
               ND_MUSICFOLDER: /music
-              ND_SPOTIFY_ID: ${SECRET_ND_SPOTIFY_ID}
-              ND_SPOTIFY_SECRET: ${SECRET_ND_SPOTIFY_SECRET}
-              ND_LASTFM_APIKEY: ${SECRET_ND_LASTFM_APIKEY}
-              ND_LASTFM_SECRET: ${SECRET_ND_LASTFM_SECRET}
+            envFrom:
+              - secretRef:
+                  name: navidrome
             resources:
               requests:
                 cpu: 200m
@@ -64,7 +63,7 @@ spec:
       app:
         className: traefik
         hosts:
-          - host: navidrome.k3s.ravenholm.io
+          - host: navidrome.${DOMAIN}
             paths:
               - path: /
                 service:
@@ -72,7 +71,7 @@ spec:
                   port: http
         tls:
           - hosts:
-            - navidrome.k3s.ravenholm.io
+            - navidrome.${DOMAIN}
             secretName: navidrome-certificate-secret
     persistence:
       config:
@@ -80,7 +79,7 @@ spec:
         existingClaim: navidrome-config-volume
       music:
         type: nfs
-        server: 10.0.0.20
+        server: ${FS2_ADDR}
         path: /mnt/zpool2/audio
         globalMounts:
           - path: /music

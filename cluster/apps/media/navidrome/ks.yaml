@@ -3,8 +3,6 @@ kind: Kustomization
 metadata:
   name: &app navidrome
   namespace: flux-system
-  labels:
-    substitution.flux.home.arpa/enabled: "true"
 spec:
   targetNamespace: media
   commonMetadata:
