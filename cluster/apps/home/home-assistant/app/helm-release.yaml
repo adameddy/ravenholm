@@ -49,6 +49,13 @@ spec:
                 memory: 1Gi
               limits:
                 memory: 1Gi
+            probes:
+              liveness:
+                enabled: false
+              readiness:
+                enabled: false
+              startup:
+                enabled: false
     service:
       app:
         controller: home-assistant
