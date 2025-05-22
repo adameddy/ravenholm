@@ -65,7 +65,7 @@ spec:
         existingClaim: nzbget-config-volume
       downloads:
         type: nfs
-        server: ${FS2_ADDR}
+        server: 10.0.0.20
         path: /mnt/zpool2/temp/downloads
         globalMounts:
           - path: /downloads

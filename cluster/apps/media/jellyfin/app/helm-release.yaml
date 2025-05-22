@@ -93,13 +93,13 @@ spec:
         existingClaim: jellyfin-config-volume
       movies:
         type: nfs
-        server: ${FS2_ADDR}
+        server: 10.0.0.20
         path: /mnt/zpool2/movies
         globalMounts:
           - path: /movies
       tv-shows:
         type: nfs
-        server: ${FS2_ADDR}
+        server: 10.0.0.20
         path: /mnt/zpool2/tv-shows
         globalMounts:
           - path: /tv-shows

@@ -89,13 +89,13 @@ spec:
         existingClaim: radarr-config-volume
       media:
         type: nfs
-        server: ${FS2_ADDR}
+        server: 10.0.0.20
         path: /mnt/zpool2/movies
         globalMounts:
           - path: /media
       downloads:
         type: nfs
-        server: ${FS2_ADDR}
+        server: 10.0.0.20
         path: /mnt/zpool2/temp/downloads
         globalMounts:
           - path: /downloads
