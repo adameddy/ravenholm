@@ -13,7 +13,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-    - host: longhorn.${DOMAIN}
+    - host: longhorn.k3s.ravenholm.io
       http:
         paths:
           - path: /

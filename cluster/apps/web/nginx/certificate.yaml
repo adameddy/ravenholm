@@ -9,4 +9,4 @@ spec:
     name: letsencrypt-production
     kind: ClusterIssuer
   dnsNames: 
-    - nginx.${DOMAIN}
+    - nginx.k3s.ravenholm.io

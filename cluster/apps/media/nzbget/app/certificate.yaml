@@ -9,4 +9,4 @@ spec:
     name: letsencrypt-production
     kind: ClusterIssuer
   dnsNames: 
-    - nzbget.${DOMAIN}
+    - nzbget.k3s.ravenholm.io

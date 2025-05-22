@@ -9,4 +9,4 @@ spec:
     name: letsencrypt-production
     kind: ClusterIssuer
   dnsNames: 
-    - jellyfin.${DOMAIN}
+    - jellyfin.k3s.ravenholm.io

@@ -63,7 +63,7 @@ spec:
       app:
         className: traefik
         hosts:
-          - host: navidrome.${DOMAIN}
+          - host: navidrome.k3s.ravenholm.io
             paths:
               - path: /
                 service:
@@ -71,7 +71,7 @@ spec:
                   port: http
         tls:
           - hosts:
-            - navidrome.${DOMAIN}
+            - navidrome.k3s.ravenholm.io
             secretName: navidrome-certificate-secret
     persistence:
       config:

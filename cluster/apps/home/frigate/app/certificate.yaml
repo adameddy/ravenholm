@@ -9,4 +9,4 @@ spec:
     name: letsencrypt-production
     kind: ClusterIssuer
   dnsNames: 
-    - frigate.${DOMAIN}
+    - frigate.k3s.ravenholm.io

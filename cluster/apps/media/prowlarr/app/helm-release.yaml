@@ -74,7 +74,7 @@ spec:
       app:
         className: traefik
         hosts:
-          - host: prowlarr.${DOMAIN}
+          - host: prowlarr.k3s.ravenholm.io
             paths:
               - path: /
                 service:
@@ -82,7 +82,7 @@ spec:
                   port: http
         tls:
           - hosts:
-            - prowlarr.${DOMAIN}
+            - prowlarr.k3s.ravenholm.io
             secretName: prowlarr-certificate-secret
     persistence:
       config:

@@ -67,7 +67,7 @@ spec:
       app:
         className: traefik
         hosts:
-          - host: home-assistant.${DOMAIN}
+          - host: home-assistant.k3s.ravenholm.io
             paths:
               - path: /
                 service:
@@ -75,7 +75,7 @@ spec:
                   port: http
         tls:
           - hosts:
-            - home-assistant.${DOMAIN}
+            - home-assistant.k3s.ravenholm.io
             secretName: home-assistant-certificate-secret
     persistence:
       config:

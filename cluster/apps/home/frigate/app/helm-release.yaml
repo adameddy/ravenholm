@@ -75,7 +75,7 @@ spec:
       app:
         className: traefik
         hosts:
-          - host: frigate.${DOMAIN}
+          - host: frigate.k3s.ravenholm.io
             paths:
               - path: /
                 service:
@@ -83,7 +83,7 @@ spec:
                   port: http
         tls:
           - hosts:
-            - frigate.${DOMAIN}
+            - frigate.k3s.ravenholm.io
             secretName: frigate-certificate-secret
     persistence:
       data:

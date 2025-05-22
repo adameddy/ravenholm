@@ -9,4 +9,4 @@ spec:
     name: letsencrypt-production
     kind: ClusterIssuer
   dnsNames: 
-    - grafana.${DOMAIN}
+    - grafana.k3s.ravenholm.io

@@ -74,7 +74,7 @@ spec:
       app:
         className: traefik
         hosts:
-          - host: radarr.${DOMAIN}
+          - host: radarr.k3s.ravenholm.io
             paths:
               - path: /
                 service:
@@ -82,7 +82,7 @@ spec:
                   port: http
         tls:
           - hosts:
-            - radarr.${DOMAIN}
+            - radarr.k3s.ravenholm.io
             secretName: radarr-certificate-secret
     persistence:
       config:
