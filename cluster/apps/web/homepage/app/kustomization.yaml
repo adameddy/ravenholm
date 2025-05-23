@@ -6,6 +6,7 @@ resources:
   - ./rbac.yaml
 configMapGenerator:
   - name: homepage-config
+    namespace: web
     files:
       - bookmarks.yaml=./resources/bookmarks.yaml
       - docker.yaml=./resources/docker.yaml
