@@ -1,11 +1,41 @@
 ---
 - Media:
-        - Jellyfin:
-            icon: jellyfin.png
-            href: https://jellyfin.k3s.ravenholm.io
-            description: Media Server
-            widget:
-              type: jellyfin
-              url: http://jellyfin.media.svc.cluster.local:8096
-              key: {{SECRET_JELLYFIN_API_KEY}}
-              enableNowPlaying: true
+  - Jellyfin:
+      icon: jellyfin.png
+      href: https://jellyfin.k3s.ravenholm.io
+      description: Media Server
+      widget:
+        type: jellyfin
+        url: http://jellyfin.media.svc.cluster.local:8096
+        key: {{SECRET_JELLYFIN_API_KEY}}
+  - Radarr:
+      icon: radarr.png
+      href: https://radarr.k3s.ravenholm.io
+      description: Movies Management
+      widget:
+        type: radarr
+        url: http://radarr.media.svc.cluster.local:7878
+        key: {{SECRET_RADARR_API_KEY}}
+  - Sonarr:
+      icon: sonarr.png
+      href: https://sonarr.k3s.ravenholm.io
+      description: TV Shows Management
+      widget:
+        type: sonarr
+        url: http://sonarr.media.svc.cluster.local:8989
+        key: {{SECRET_SONARR_API_KEY}}
+- Infrastructure:
+  - TrueNAS:
+      href: http://truenas
+      icon: truenas.png
+      description: TrueNAS Scale
+      widget:
+        type: truenas
+        url: http://truenas
+  - Proxmox:
+      href: https://10.0.0.30:8006
+      icon: https://www.45drives.com/solutions/proxmox/img/proxmox_Logo.png
+      description: Virtualization Platform
+      widget:
+        type: proxmox
+        url: https://10.0.0.30:8006
