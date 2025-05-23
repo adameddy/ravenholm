@@ -48,7 +48,7 @@ spec:
               capabilities: { drop: ["ALL"] }
             probes:
               liveness: &probes
-                enabled: true
+                enabled: false
                 custom: true
                 spec:
                   httpGet:
