@@ -4,30 +4,37 @@
       icon: jellyfin.png
       href: https://jellyfin.k3s.ravenholm.io
       description: Media Server
+      statusStyle: "dot"
   - Navidrome:
       icon: navidrome.png
       href: https://navidrome.k3s.ravenholm.io
       description: Audio Server
+      statusStyle: "dot"
   - Radarr:
       icon: radarr.png
       href: https://radarr.k3s.ravenholm.io
       description: Movies Management
+      statusStyle: "dot"
   - Sonarr:
       icon: sonarr.png
       href: https://sonarr.k3s.ravenholm.io
       description: TV Shows Management
+      statusStyle: "dot"
   - Lidarr:
       icon: lidarr.png
       href: https://lidarr.k3s.ravenholm.io
       description: Audio Management
+      statusStyle: "dot"
   - Prowlarr:
       icon: prowlarr.png
       href: https://prowlarr.k3s.ravenholm.io
       description: Index Management
+      statusStyle: "dot"
   - Jellyseer:
       icon: Jellyseer.png
       href: https://jellyseer.k3s.ravenholm.io
       description: Media Requester
+      statusStyle: "dot"
 - Infrastructure:
   - TrueNAS:
       href: http://truenas
