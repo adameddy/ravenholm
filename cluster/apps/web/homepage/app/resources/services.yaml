@@ -1,0 +1,10 @@
+---
+- Home:
+    - HomeAssistant:
+        href: https://ha
+        icon: home-assistant.png
+        description: Home Assistant
+        widget:
+          type: homeassistant
+          url: http://homeassistant.home.arpa:8123
+          key: ""
