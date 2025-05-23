@@ -47,6 +47,9 @@ spec:
                 memory: 200Mi
               limits:
                 memory: 1Gi
+            envFrom:
+              - secretRef:
+                  name: homepage-secrets
     service:
       app:
         controller: homepage

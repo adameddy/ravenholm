@@ -1,10 +1,11 @@
 ---
-- Home:
-    - HomeAssistant:
-        href: https://ha
-        icon: home-assistant.png
-        description: Home Assistant
-        widget:
-          type: homeassistant
-          url: http://homeassistant.home.arpa:8123
-          key: ""
+- Media:
+        - Jellyfin:
+            icon: jellyfin.png
+            href: https://jellyfin.k3s.ravenholm.io
+            description: Media Server
+            widget:
+              type: jellyfin
+              url: http://jellyfin.media.svc.cluster.local:8096
+              key: {{SECRET_JELLYFIN_API_KEY}}
+              enableNowPlaying: true

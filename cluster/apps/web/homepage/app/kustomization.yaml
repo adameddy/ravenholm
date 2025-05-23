@@ -4,6 +4,7 @@ resources:
   - ./helm-release.yaml
   - ./certificate.yaml
   - ./rbac.yaml
+  - ./secret.sops.yaml
 configMapGenerator:
   - name: homepage-config
     namespace: web
