@@ -4,6 +4,10 @@
       icon: jellyfin.png
       href: https://jellyfin.k3s.ravenholm.io
       description: Media Server
+  - Navidrome:
+      icon: navidrome.png
+      href: https://navidrome.k3s.ravenholm.io
+      description: Audio Server
   - Radarr:
       icon: radarr.png
       href: https://radarr.k3s.ravenholm.io
@@ -12,6 +16,18 @@
       icon: sonarr.png
       href: https://sonarr.k3s.ravenholm.io
       description: TV Shows Management
+  - Lidarr:
+      icon: lidarr.png
+      href: https://lidarr.k3s.ravenholm.io
+      description: Audio Management
+  - Prowlarr:
+      icon: prowlarr.png
+      href: https://prowlarr.k3s.ravenholm.io
+      description: Index Management
+  - Jellyseer:
+      icon: Jellyseer.png
+      href: https://jellyseer.k3s.ravenholm.io
+      description: Media Requester
 - Infrastructure:
   - TrueNAS:
       href: http://truenas

@@ -8,5 +8,8 @@ hideVersion: true
 layout:
   Media:
     style: row
-    columns: 3
+    columns: 4
     icon: mdi-play-circle
+  Infrastructure:
+    style: row
+    columns: 4
