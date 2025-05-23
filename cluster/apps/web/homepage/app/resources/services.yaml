@@ -31,22 +31,31 @@
       description: Index Management
       statusStyle: "dot"
   - Jellyseer:
-      icon: Jellyseer.png
+      icon: jellyseer.png
       href: https://jellyseer.k3s.ravenholm.io
       description: Media Requester
       statusStyle: "dot"
+- Home:
+  - Homeassistant:
+        icon: homeassistant.png
+        href: https://home-assistant.k3s.ravenholm.io
+        description: Home Automation
+        statusStyle: "dot"
+  - Frigate:
+        icon: frigate.png
+        href: https://frigate.k3s.ravenholm.io
+        description: Security Camera NVR
+        statusStyle: "dot"
 - Infrastructure:
   - TrueNAS:
       href: http://truenas
       icon: truenas.png
       description: TrueNAS Scale
-      widget:
-        type: truenas
-        url: http://truenas
   - Proxmox:
       href: https://10.0.0.30:8006
       icon: https://www.45drives.com/solutions/proxmox/img/proxmox_Logo.png
       description: Virtualization Platform
-      widget:
-        type: proxmox
-        url: https://10.0.0.30:8006
+  - Unifi:
+      href: https://10.0.0.1
+      icon: unifi.png
+      description: Network Management
