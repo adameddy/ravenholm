@@ -39,9 +39,6 @@ spec:
       app:
         controller: mosquitto
         ports:
-          http:
-            port: 80
-            enabled: false
           mqtt:
             port: 1883
             enabled: true
