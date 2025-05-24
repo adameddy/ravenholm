@@ -3,25 +3,25 @@
   - Jellyfin:
       icon: jellyfin.png
       href: https://jellyfin.k3s.ravenholm.io
-      description: Media Server
+      description: Movie & TV Show Streaming
       siteMonitor: http://jellyfin.media.svc.cluster.local:8096
       statusStyle: "dot"
   - Navidrome:
       icon: navidrome.png
       href: https://navidrome.k3s.ravenholm.io
-      description: Audio Server
+      description: Audio Streaming
       siteMonitor: http://navidrome.media.svc.cluster.local:4533
       statusStyle: "dot"
   - Radarr:
       icon: radarr.png
       href: https://radarr.k3s.ravenholm.io
-      description: Movies Management
+      description: Movie Management
       siteMonitor: http://radarr.media.svc.cluster.local:7878
       statusStyle: "dot"
   - Sonarr:
       icon: sonarr.png
       href: https://sonarr.k3s.ravenholm.io
-      description: TV Shows Management
+      description: TV Show Management
       siteMonitor: http://sonarr.media.svc.cluster.local:8989
       statusStyle: "dot"
   - Lidarr:
@@ -39,7 +39,7 @@
   - Jellyseerr:
       icon: jellyseerr.png
       href: https://jellyseerr.k3s.ravenholm.io
-      description: Media Requester
+      description: Movie & TV Show Requester
       siteMonitor: http://jellyseerr.media.svc.cluster.local:5055
       statusStyle: "dot"
 - Home:
