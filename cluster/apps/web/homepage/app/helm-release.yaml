@@ -92,5 +92,3 @@ spec:
             path: /app/config/widgets.yaml
           - subPath: custom.css
             path: /app/config/custom.css
-          - subPath: favicon.png
-            path: /app/public/images/favicon.png
