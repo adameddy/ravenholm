@@ -4,6 +4,7 @@
       icon: jellyfin.png
       href: https://jellyfin.k3s.ravenholm.io
       description: Media Server
+      siteMonitor: http://jellyfin.media.svc.cluster.local:8096
       statusStyle: "dot"
   - Navidrome:
       icon: navidrome.png
@@ -30,14 +31,14 @@
       href: https://prowlarr.k3s.ravenholm.io
       description: Index Management
       statusStyle: "dot"
-  - Jellyseer:
-      icon: jellyseer.png
-      href: https://jellyseer.k3s.ravenholm.io
+  - Jellyseerr:
+      icon: jellyseerr.png
+      href: https://jellyseerr.k3s.ravenholm.io
       description: Media Requester
       statusStyle: "dot"
 - Home:
   - Homeassistant:
-        icon: homeassistant.png
+        icon: home-assistant.png
         href: https://home-assistant.k3s.ravenholm.io
         description: Home Automation
         statusStyle: "dot"
