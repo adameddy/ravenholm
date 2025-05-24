@@ -43,4 +43,5 @@ spec:
               - kind: ConfigMap
                 name: cluster-settings
       target:
-        labelSelector: substitution.flux.home.arpa/enabled=true
+        group: kustomize.toolkit.fluxcd.io
+        kind: Kustomization

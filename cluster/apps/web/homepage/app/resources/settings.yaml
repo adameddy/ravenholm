@@ -5,6 +5,7 @@ theme: dark
 color: slate
 headerStyle: clean
 hideVersion: true
+disableCollapse: true
 layout:
   Media:
     style: row
@@ -13,6 +14,8 @@ layout:
   Home:
     style: row
     columns: 4
+    icon: mdi-home
   Infrastructure:
     style: row
     columns: 4
+    icon: mdi-server

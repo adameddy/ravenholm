@@ -45,7 +45,7 @@ spec:
               ND_MUSICFOLDER: /music
             envFrom:
               - secretRef:
-                  name: navidrome
+                  name: navidrome-secrets
             resources:
               requests:
                 cpu: 200m
