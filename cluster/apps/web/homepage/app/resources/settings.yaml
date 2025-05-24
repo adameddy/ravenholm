@@ -1,7 +1,9 @@
 ---
 title: Ravenholm
 favicon: https://www.google.com/favicon.ico
-background: https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=format&fit=crop&w=2560&q=80
+background:
+  image: https://c4.wallpaperflare.com/wallpaper/276/478/552/video-game-garry-s-mod-wallpaper-preview.jpg
+  blur: sm # https://tailwindcss.com/docs/backdrop-blur
 theme: dark
 color: slate
 headerStyle: clean
