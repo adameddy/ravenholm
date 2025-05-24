@@ -55,15 +55,28 @@
         description: Security Camera NVR
         siteMonitor: http://frigate.home.svc.cluster.local:5000
         statusStyle: "dot"
+- Utilities:
+  - Grafana:
+      href: https://grafana.k3s.ravenholm.io
+      icon: grafana.png
+      description: Logs & Metrics
 - Infrastructure:
-  - TrueNAS:
-      href: http://truenas
-      icon: truenas.png
-      description: TrueNAS Scale
   - Proxmox:
       href: https://10.0.0.30:8006
       icon: https://www.45drives.com/solutions/proxmox/img/proxmox_Logo.png
       description: Virtualization Platform
+  - TrueNAS Fast:
+      href: http://10.0.0.10
+      icon: truenas.png
+      description: Flash Storage
+  - TrueNAS Slow:
+      href: http://10.0.0.20
+      icon: truenas.png
+      description: Archive Storage
+  - Longhorn:
+      href: https://longhorn.k3s.ravenholm.io
+      icon: longhorn.png
+      description: Cluster Storage
   - Unifi:
       href: https://10.0.0.1
       icon: unifi.png

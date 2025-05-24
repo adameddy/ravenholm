@@ -13,6 +13,9 @@ layout:
   Home:
     style: row
     columns: 4
+  Utilities:
+    style: row
+    columns: 4
   Infrastructure:
     style: row
     columns: 4
