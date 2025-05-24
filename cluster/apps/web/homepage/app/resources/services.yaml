@@ -10,42 +10,50 @@
       icon: navidrome.png
       href: https://navidrome.k3s.ravenholm.io
       description: Audio Server
+      siteMonitor: http://navidrome.media.svc.cluster.local:4533
       statusStyle: "dot"
   - Radarr:
       icon: radarr.png
       href: https://radarr.k3s.ravenholm.io
       description: Movies Management
+      siteMonitor: http://radarr.media.svc.cluster.local:7878
       statusStyle: "dot"
   - Sonarr:
       icon: sonarr.png
       href: https://sonarr.k3s.ravenholm.io
       description: TV Shows Management
+      siteMonitor: http://sonarr.media.svc.cluster.local:8989
       statusStyle: "dot"
   - Lidarr:
       icon: lidarr.png
       href: https://lidarr.k3s.ravenholm.io
       description: Audio Management
+      siteMonitor: http://lidarr.media.svc.cluster.local:8686
       statusStyle: "dot"
   - Prowlarr:
       icon: prowlarr.png
       href: https://prowlarr.k3s.ravenholm.io
       description: Index Management
+      siteMonitor: http://prowlarr.media.svc.cluster.local:9696
       statusStyle: "dot"
   - Jellyseerr:
       icon: jellyseerr.png
       href: https://jellyseerr.k3s.ravenholm.io
       description: Media Requester
+      siteMonitor: http://jellyseerr.media.svc.cluster.local:5055
       statusStyle: "dot"
 - Home:
-  - Homeassistant:
+  - Home Assistant:
         icon: home-assistant.png
         href: https://home-assistant.k3s.ravenholm.io
         description: Home Automation
+        siteMonitor: http://home-assistant.home.svc.cluster.local:8123
         statusStyle: "dot"
   - Frigate:
         icon: frigate.png
         href: https://frigate.k3s.ravenholm.io
         description: Security Camera NVR
+        siteMonitor: http://frigate.home.svc.cluster.local:5000
         statusStyle: "dot"
 - Infrastructure:
   - TrueNAS:
