@@ -10,12 +10,9 @@ layout:
   Media:
     style: row
     columns: 4
-    icon: mdi-play-circle
   Home:
     style: row
     columns: 4
-    icon: mdi-home
   Infrastructure:
     style: row
     columns: 4
-    icon: mdi-server
