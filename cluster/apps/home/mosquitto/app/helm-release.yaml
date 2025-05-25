@@ -43,20 +43,6 @@ spec:
             port: 1883
             enabled: true
         type: ClusterIP
-    ingress:
-      app:
-        className: traefik
-        hosts:
-          - host: mosquitto.k3s.ravenholm.io
-            paths:
-              - path: /
-                service:
-                  identifier: app
-                  port: http
-        tls:
-          - hosts:
-            - mosquitto.k3s.ravenholm.io
-            secretName: mosquitto-certificate-secret
     persistence:
       config:
         existingClaim: mosquitto-config-volume
