@@ -24,6 +24,8 @@ spec:
   values:
     controllers:
       mosquitto:
+        annotations:
+          reloader.stakater.com/auto: "true"
         containers:
           app:
             image:
@@ -48,3 +50,12 @@ spec:
         existingClaim: mosquitto-config-volume
         globalMounts:
           - path: /config
+      config-file:
+        enabled: true
+        type: configMap
+        name: mosquitto-configmap
+        advancedMounts:
+          mosquitto:
+            app:
+              - path: /mosquitto/config/mosquitto.conf
+                subPath: mosquitto.conf
