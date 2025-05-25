@@ -4,6 +4,7 @@ resources:
   - ./helm-release.yaml
 configMapGenerator:
   - name: mosquitto-configmap
+    namespace: home
     files:
       - mosquitto.conf=./config/mosquitto.conf
 generatorOptions:
