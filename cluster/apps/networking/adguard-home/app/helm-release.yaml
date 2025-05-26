@@ -60,11 +60,13 @@ spec:
             - adguard-home.k3s.ravenholm.io
             secretName: adguard-home-certificate-secret
     persistence:
-      data:
+      config:
         enabled: true
         existingClaim: adguard-home-config-volume
-        subPath:
-          - path: conf
-            mountPath: /opt/adguardhome/conf
-          - path: data
-            mountPath: /opt/adguardhome/work
+        advancedMounts:
+          adguard-home:
+            adguard-home:
+              - path: /opt/adguardhome/conf
+                subPath: conf
+              - path: /opt/adguardhome/work
+                subPath: work
