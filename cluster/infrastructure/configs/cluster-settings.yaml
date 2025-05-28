@@ -7,3 +7,4 @@ data:
   TIMEZONE: America/Denver
   FS1_ADDR: "10.0.0.10"
   FS2_ADDR: "10.0.0.20"
+  BLOCKY_IP: "10.0.0.153"

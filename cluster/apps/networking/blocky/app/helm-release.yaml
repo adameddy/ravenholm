@@ -74,6 +74,7 @@ spec:
       dns:
         controller: blocky
         type: LoadBalancer
+        loadBalancerIP: ${BLOCKY_IP}
         ports:
           dns-tcp:
             enabled: true
