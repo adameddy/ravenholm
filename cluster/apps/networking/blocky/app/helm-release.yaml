@@ -74,8 +74,6 @@ spec:
       dns:
         controller: blocky
         type: LoadBalancer
-        annotations:
-          lbipam.cilium.io/ips: ${BLOCKY_IP}
         ports:
           dns-tcp:
             enabled: true
