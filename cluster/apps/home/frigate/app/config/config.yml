@@ -8,8 +8,8 @@ go2rtc:
       front_door_high_res:
         - rtsp://admin:4C$3DugQBRPT@10.0.0.205/Preview_01_main
 
-#ffmpeg:
-#  hwaccel_args: preset-intel-qsv-h264
+ffmpeg:
+  hwaccel_args: preset-intel-qsv-h264
 
 #detectors:
 #  coral:
