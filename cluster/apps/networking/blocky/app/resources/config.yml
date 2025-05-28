@@ -4,11 +4,7 @@ ports:
 upstreams:
   groups:
     default:
-      - https://dns.google/dns-query
-      - https://dns.cloudflare.com/dns-query
-bootstrapDns:
-  - tcp+udp:1.1.1.1
-  - tcp+udp:8.8.8.8
+      - 10.0.0.1
 filtering:
   queryTypes:
     - AAAA
