@@ -46,10 +46,6 @@ spec:
             enabled: true
         type: ClusterIP
     persistence:
-      config:
-        existingClaim: mosquitto-config-volume
-        globalMounts:
-          - path: /config
       config-file:
         enabled: true
         type: configMap
