@@ -11,10 +11,10 @@ go2rtc:
 ffmpeg:
   hwaccel_args: preset-intel-qsv-h264
 
-detectors:
-  coral:
-    type: edgetpu
-    device: usb
+#detectors:
+#  coral:
+#    type: edgetpu
+#    device: usb
 
 cameras:
   front_door:
