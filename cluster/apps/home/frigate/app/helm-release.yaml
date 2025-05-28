@@ -28,7 +28,7 @@ spec:
           reloader.stakater.com/auto: 'true'
         pod:
           nodeSelector:
-            feature.node.kubernetes.io/custom-google-coral: "true"
+            google.feature.node.kubernetes.io/coral: "true"
             intel.feature.node.kubernetes.io/gpu: "true"
         containers:
           app:
