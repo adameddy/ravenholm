@@ -65,4 +65,4 @@ spec:
           - path: /docs/main
       test:
         globalMounts:
-          - path: /docs/main
+          - path: /resources
