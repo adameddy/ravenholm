@@ -72,6 +72,6 @@ spec:
           - subPath: mkdocs.yml
             path: /docs/mkdocs.yml
       docs:
-        existingClaim: radarr-config-volume
+        existingClaim: docs-volume
         globalMounts:
           - path: /docs/main
