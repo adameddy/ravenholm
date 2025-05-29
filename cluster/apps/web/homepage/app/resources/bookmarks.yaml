@@ -7,6 +7,9 @@
     - kubesearch:
         - icon: kubernetes-dashboard.png
           href: 'https://kubesearch.dev/'
-    - k3s-home-cluster:
+    - github:
         - icon: github.png
-          href: 'https://github.com/'
+          href: 'https://github.com/adameddy'
+    - bjw-s-docs:
+        - icon: github.png
+          href: 'https://bjw-s-labs.github.io/helm-charts/docs/'
