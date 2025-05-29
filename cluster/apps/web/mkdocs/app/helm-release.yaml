@@ -72,6 +72,6 @@ spec:
           - subPath: mkdocs.yml
             path: /docs/mkdocs.yml
       docs:
-        existingClaim: mkdocs-docs-volume
+        type: emptyDir
         globalMounts:
           - path: /docs/main

@@ -3,7 +3,6 @@ kind: Kustomization
 resources:
   - ./helm-release.yaml
   - ./certificate.yaml
-  - ./docs-pvc.yaml
 configMapGenerator:
   - name: mkdocs-config
     namespace: web
