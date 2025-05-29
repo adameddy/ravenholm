@@ -59,3 +59,8 @@ spec:
         globalMounts:
           - subPath: mkdocs.yml
             path: /docs/mkdocs.yml
+      docs:
+        name: docs
+        globalMounts:
+          - hostPath: /resources/main
+          - path: /docs/main
