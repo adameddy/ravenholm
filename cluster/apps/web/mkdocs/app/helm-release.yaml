@@ -72,6 +72,6 @@ spec:
           - subPath: mkdocs.yml
             path: /docs/mkdocs.yml
       docs:
-        existingClaim: docs-volume
+        existingClaim: mkdocs-docs-volume
         globalMounts:
           - path: /docs/main
