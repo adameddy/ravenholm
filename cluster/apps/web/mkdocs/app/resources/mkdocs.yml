@@ -1,6 +1,5 @@
 
 site_name: My Documentation
-docs_dir: otherdocs
 theme:
   name: 'material'
 nav:
