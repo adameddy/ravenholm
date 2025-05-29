@@ -42,7 +42,7 @@ spec:
               - --depth=1
               - --period=600s
               - --link=current
-              - --root=/docs/main
+              - --root=/docs_dir
     service:
       app:
         controller: mkdocs
@@ -74,4 +74,4 @@ spec:
       docs:
         type: emptyDir
         globalMounts:
-          - path: /docs/main
+          - path: /docs_dir
