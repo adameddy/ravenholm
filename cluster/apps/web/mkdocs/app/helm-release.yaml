@@ -60,6 +60,7 @@ spec:
           - subPath: mkdocs.yml
             path: /docs/mkdocs.yml
       docs:
-        type: emptyDir
+        type: configMap
+        name: mkdocs-docs
         globalMounts:
-          - path: /docs/main
+          - path: /docs/docs

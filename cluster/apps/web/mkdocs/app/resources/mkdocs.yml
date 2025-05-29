@@ -1,6 +1,6 @@
 
 site_name: My Documentation
-docs_dir: main
+docs_dir: docs
 theme:
   name: 'material'
 nav:
