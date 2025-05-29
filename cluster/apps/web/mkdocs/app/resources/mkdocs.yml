@@ -1,0 +1,10 @@
+
+site_name: My Documentation
+docs_dir: otherdocs
+theme:
+  name: 'material'
+nav:
+  - Introduction: 'index.md'
+  - 'about.md'
+  - 'Issue Tracker': 'https://example.com/'
+  - 'Files': '/files/'
