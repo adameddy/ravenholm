@@ -63,7 +63,3 @@ spec:
         type: emptyDir
         globalMounts:
           - path: /docs/main
-      test:
-        globalMounts:
-          - subPath: /resources
-            path: /resources
