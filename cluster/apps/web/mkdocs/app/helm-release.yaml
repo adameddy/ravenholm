@@ -64,5 +64,5 @@ spec:
         globalMounts:
           - path: /docs/main
       test:
-        type: hostPath
-        hostPath: ./resources
+        globalMounts:
+          - path: /docs/main
