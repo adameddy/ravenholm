@@ -38,11 +38,11 @@ spec:
               repository: registry.k8s.io/git-sync/git-sync
               tag: v4.0.0
             args:
-            - --repo=https://github.com/kubernetes/git-sync
-            - --depth=1
-            - --period=600s
-            - --link=current
-            - --root=/docs/main
+              - --repo=https://github.com/adameddy/homelab-docs
+              - --depth=1
+              - --period=600s
+              - --link=current
+              - --root=/docs/main
     service:
       app:
         controller: mkdocs
