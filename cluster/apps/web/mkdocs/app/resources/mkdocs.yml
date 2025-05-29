@@ -1,10 +1,7 @@
 
 site_name: My Documentation
-docs_dir: main
+docs_dir: main/current
 theme:
   name: 'material'
 nav:
-  - Introduction: 'index.md'
-  - 'about.md'
-  - 'Issue Tracker': 'https://example.com/'
-  - 'Files': '/files/'
+  - TestNav: 'test.md'
