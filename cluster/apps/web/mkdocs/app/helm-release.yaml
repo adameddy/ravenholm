@@ -67,4 +67,4 @@ spec:
             path: /docs/mkdocs.yml
       test:
         type: emptyDir
-        path: /temp
+        path: /docs/main
