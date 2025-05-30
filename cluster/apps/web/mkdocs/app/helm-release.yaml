@@ -65,6 +65,6 @@ spec:
       data:
         type: nfs
         server: 10.0.0.20
-        path: /mnt/zpool2/mkdocs
+        path: /mnt/zpool2/other/mkdocs
         globalMounts:
           - path: /docs-dir
