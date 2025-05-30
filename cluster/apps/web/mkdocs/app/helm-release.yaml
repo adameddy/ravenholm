@@ -53,15 +53,15 @@ spec:
             - mkdocs.k3s.ravenholm.io
             secretName: mkdocs-certificate-secret
     persistence:
-      config:
-        type: configMap
-        name: mkdocs-config
-        globalMounts:
-          - subPath: mkdocs.yml
-            path: /docs/mkdocs.yml
       data:
         type: nfs
         server: 10.0.0.20
         path: /mnt/zpool2/other/mkdocs
         globalMounts:
           - path: /docs-dir
+      config:
+        type: configMap
+        name: mkdocs-config
+        globalMounts:
+          - subPath: mkdocs.yml
+            path: /docs/mkdocs.yml
