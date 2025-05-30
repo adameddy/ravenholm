@@ -67,4 +67,5 @@ spec:
             path: /docs/mkdocs.yml
       test:
         type: emptyDir
-        path: /docs/main
+        globalMounts:
+          - path: /docs/main
