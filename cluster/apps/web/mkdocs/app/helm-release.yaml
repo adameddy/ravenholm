@@ -65,3 +65,6 @@ spec:
         globalMounts:
           - subPath: mkdocs.yml
             path: /docs/mkdocs.yml
+      test:
+        type: emptyDir
+        path: /temp
