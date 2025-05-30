@@ -58,14 +58,10 @@ spec:
         server: 10.0.0.20
         path: /mnt/zpool2/other/mkdocs
         globalMounts:
-          - path: /docs-dir
+          - path: /docs/main
       config:
         type: configMap
         name: mkdocs-config
         globalMounts:
           - subPath: mkdocs.yml
             path: /docs/mkdocs.yml
-      test:
-        type: emptyDir
-        globalMounts:
-          - path: /docs/main
