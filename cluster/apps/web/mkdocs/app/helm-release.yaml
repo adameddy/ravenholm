@@ -22,9 +22,6 @@ spec:
       strategy: rollback
       retries: 3
   values:
-    defaultPodOptions:
-      securityContext:
-        fsGroup: 101
     controllers:
       mkdocs:
         annotations:
