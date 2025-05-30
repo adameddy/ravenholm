@@ -60,6 +60,10 @@
       href: https://grafana.k3s.ravenholm.io
       icon: grafana.png
       description: Logs & Metrics
+- MkDocs:
+      href: https://mkdocs.k3s.ravenholm.io
+      icon: mkdocs.png
+      description: Notes & Documention
 - Infrastructure:
   - Proxmox:
       href: https://10.0.0.30:8006
