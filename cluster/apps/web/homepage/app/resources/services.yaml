@@ -60,7 +60,7 @@
       href: https://grafana.k3s.ravenholm.io
       icon: grafana.png
       description: Logs & Metrics
-- MkDocs:
+  - MkDocs:
       href: https://mkdocs.k3s.ravenholm.io
       icon: mkdocs.png
       description: Notes & Documention
