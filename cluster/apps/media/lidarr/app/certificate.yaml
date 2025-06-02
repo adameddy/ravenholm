@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: lidarr-ingress-certificate
+  namespace: media
+spec:
+  secretName: lidarr-certificate-secret
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  dnsNames: 
+    - lidarr.k3s.ravenholm.io
