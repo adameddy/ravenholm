@@ -59,7 +59,7 @@ spec:
                   # - SYS_MODULE
                   - NET_RAW
                 drop:
-                  - AL
+                  - ALL
             resources:
               requests:
                 cpu: 50m
