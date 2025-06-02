@@ -50,7 +50,7 @@ spec:
               WG_ALLOWED_IPS: 10.0.0.0/24
               UI_TRAFFIC_STATS: true
             securityContext:
-              allowPrivilegeEscalation: false
+              allowPrivilegeEscalation: true
               readOnlyRootFilesystem: true
               capabilities:
                 add:
@@ -72,6 +72,13 @@ spec:
         ports:
           http:
             port: 51821
+        type: ClusterIP
+      wg:
+        controller: wg-easy
+        ports:
+          wg:
+            port: 51820
+            protocol: UDP
         type: ClusterIP
     ingress:
       app:
