@@ -39,7 +39,7 @@ spec:
         ingressClassName: internal
         integrations:
           traefik:
-            enabled: false
+            enabled: true
           certManager:
             enabled: false
             certificateIssuer: domain-1-le-prod
