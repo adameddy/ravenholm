@@ -1,11 +1,11 @@
 ---
-- Bookmarks:
-    - kubesearch:
-        - icon: kubernetes-dashboard.png
-          href: 'https://kubesearch.dev/'
+- Resources:
     - github:
         - icon: github.png
           href: 'https://github.com/adameddy'
+    - kubesearch:
+        - icon: kubernetes-dashboard.png
+          href: 'https://kubesearch.dev/'
     - bjw-s-docs:
         - icon: github.png
           href: 'https://bjw-s-labs.github.io/helm-charts/docs/'

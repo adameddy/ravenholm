@@ -19,3 +19,6 @@ layout:
   Infrastructure:
     style: row
     columns: 4
+  Networking:
+    style: row
+    columns: 4

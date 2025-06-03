@@ -81,7 +81,12 @@
       href: https://longhorn.ravenholm.io
       icon: longhorn.png
       description: Cluster Storage
+- Networking:
   - Unifi:
       href: https://10.0.0.1
       icon: unifi.png
       description: Network Management
+  - Wireguard:
+      href: https://wg-easy.ravenholm.io
+      icon: wireguard.png
+      description: VPN Management
