@@ -78,7 +78,7 @@ spec:
       app:
         className: traefik
         hosts:
-          - host: jellyfin.k3s.ravenholm.io
+          - host: jellyfin.${DOMAIN}
             paths:
               - path: /
                 service:
@@ -86,7 +86,7 @@ spec:
                   port: http
         tls:
           - hosts:
-            - jellyfin.k3s.ravenholm.io
+            - jellyfin.${DOMAIN}
             secretName: jellyfin-certificate-secret
     persistence:
       config:

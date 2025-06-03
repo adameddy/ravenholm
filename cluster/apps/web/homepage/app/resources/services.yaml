@@ -2,66 +2,66 @@
 - Media:
   - Jellyfin:
       icon: jellyfin.png
-      href: https://jellyfin.k3s.ravenholm.io
+      href: https://jellyfin.${DOMAIN}
       description: Movie & TV Show Streaming
       siteMonitor: http://jellyfin.media.svc.cluster.local:8096
       statusStyle: "dot"
   - Navidrome:
       icon: navidrome.png
-      href: https://navidrome.k3s.ravenholm.io
+      href: https://navidrome.${DOMAIN}
       description: Audio Streaming
       siteMonitor: http://navidrome.media.svc.cluster.local:4533
       statusStyle: "dot"
   - Radarr:
       icon: radarr.png
-      href: https://radarr.k3s.ravenholm.io
+      href: https://radarr.${DOMAIN}
       description: Movie Management
       siteMonitor: http://radarr.media.svc.cluster.local:7878
       statusStyle: "dot"
   - Sonarr:
       icon: sonarr.png
-      href: https://sonarr.k3s.ravenholm.io
+      href: https://sonarr.${DOMAIN}
       description: TV Show Management
       siteMonitor: http://sonarr.media.svc.cluster.local:8989
       statusStyle: "dot"
   - Lidarr:
       icon: lidarr.png
-      href: https://lidarr.k3s.ravenholm.io
+      href: https://lidarr.${DOMAIN}
       description: Audio Management
       siteMonitor: http://lidarr.media.svc.cluster.local:8686
       statusStyle: "dot"
   - Prowlarr:
       icon: prowlarr.png
-      href: https://prowlarr.k3s.ravenholm.io
+      href: https://prowlarr.${DOMAIN}
       description: Index Management
       siteMonitor: http://prowlarr.media.svc.cluster.local:9696
       statusStyle: "dot"
   - Jellyseerr:
       icon: jellyseerr.png
-      href: https://jellyseerr.k3s.ravenholm.io
+      href: https://jellyseerr.${DOMAIN}
       description: Movie & TV Show Requester
       siteMonitor: http://jellyseerr.media.svc.cluster.local:5055
       statusStyle: "dot"
 - Home:
   - Home Assistant:
         icon: home-assistant.png
-        href: https://home-assistant.k3s.ravenholm.io
+        href: https://home-assistant.${DOMAIN}
         description: Home Automation
         siteMonitor: http://home-assistant.home.svc.cluster.local:8123
         statusStyle: "dot"
   - Frigate:
         icon: frigate.png
-        href: https://frigate.k3s.ravenholm.io
+        href: https://frigate.${DOMAIN}
         description: Security Camera NVR
         siteMonitor: http://frigate.home.svc.cluster.local:5000
         statusStyle: "dot"
 - Utilities:
   - Grafana:
-      href: https://grafana.k3s.ravenholm.io
+      href: https://grafana.${DOMAIN}
       icon: grafana.png
       description: Logs & Metrics
   - MkDocs:
-      href: https://mkdocs.k3s.ravenholm.io
+      href: https://mkdocs.${DOMAIN}
       icon: mkdocs.png
       description: Notes & Documention
 - Infrastructure:
@@ -78,7 +78,7 @@
       icon: truenas.png
       description: Archive Storage
   - Longhorn:
-      href: https://longhorn.k3s.ravenholm.io
+      href: https://longhorn.${DOMAIN}
       icon: longhorn.png
       description: Cluster Storage
   - Unifi:

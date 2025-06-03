@@ -51,8 +51,8 @@ spec:
       enabled: true
       ingressClassName: traefik
       hosts: 
-        - grafana.k3s.ravenholm.io
+        - grafana.${DOMAIN}
       tls:
           - hosts:
-            - grafana.k3s.ravenholm.io
+            - grafana.${DOMAIN}
             secretName: grafana-certificate-secret

@@ -42,7 +42,7 @@ spec:
       app:
         className: traefik
         hosts:
-          - host: mkdocs.k3s.ravenholm.io
+          - host: mkdocs.${DOMAIN}
             paths:
               - path: /
                 service:
@@ -50,7 +50,7 @@ spec:
                   port: http
         tls:
           - hosts:
-            - mkdocs.k3s.ravenholm.io
+            - mkdocs.${DOMAIN}
             secretName: mkdocs-certificate-secret
     persistence:
       data:

@@ -9,4 +9,4 @@ spec:
     name: letsencrypt-production
     kind: ClusterIssuer
   dnsNames: 
-    - sonarr.k3s.ravenholm.io
+    - sonarr.${DOMAIN}
