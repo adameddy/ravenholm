@@ -30,10 +30,9 @@ spec:
       stopAll: false
     service:
       vpn:
-        #loadBalancerIP: ${WG_EASY_IP}
         type: LoadBalancer
-        clusterIP: ${WG_EASY_IP}
-        #externalTrafficPolicy: Local
+        annotations:
+          kube-vip.io/loadbalancerIPs: 10.0.0.177
     ingress:
       main:
         enabled: true
