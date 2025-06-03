@@ -42,6 +42,10 @@ spec:
                 service:
                   identifier: main
                   port: http
+        tls:
+          - hosts:
+            - vpn.${DOMAIN}
+            secretName: wg-easy-certificate-secret
     persistence:
       config:
         existingClaim: wg-easy-config-volume
