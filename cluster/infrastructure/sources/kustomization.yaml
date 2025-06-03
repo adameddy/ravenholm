@@ -11,3 +11,4 @@ resources:
   - prometheus-community.yaml
   - staker-charts.yaml
   - external-secrets.yaml
+  - truecharts.yaml
