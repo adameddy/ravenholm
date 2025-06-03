@@ -9,4 +9,4 @@ spec:
     name: letsencrypt-production
     kind: ClusterIssuer
   dnsNames: 
-    - vpn.${DOMAIN}
+    - wg-easy.${DOMAIN}
