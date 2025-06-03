@@ -30,7 +30,7 @@ spec:
       stopAll: false
     service:
       vpn:
-        #loadBalancerIP: ${WG_EASY_IP}
+        loadBalancerIP: ${WG_EASY_IP}
         type: LoadBalancer
         externalTrafficPolicy: Local
     ingress:
