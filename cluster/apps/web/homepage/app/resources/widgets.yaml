@@ -1,4 +1,6 @@
 ---
+- logo:
+    icon: https://github.com/adameddy/ravenholm/blob/main/cluster/apps/web/homepage/app/resources/logo.png?raw=true
 - greeting:
-    text_size: 2xl
+    text_size: 4xl
     text: Ravenholm
