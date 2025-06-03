@@ -38,7 +38,9 @@ spec:
           - host: vpn.${DOMAIN}
             paths:
               - path: /
-                PathType: Prefix
+                service:
+                  identifier: main
+                  port: http
         tls:
           - hosts:
             - vpn.${DOMAIN}
