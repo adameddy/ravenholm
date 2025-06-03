@@ -64,6 +64,10 @@
       href: https://mkdocs.ravenholm.io
       icon: mkdocs.png
       description: Notes & Documention
+  - NZBGet:
+      href: https://nzbget.ravenholm.io
+      icon: nzbget.png
+      description: Usenet Downloader
 - Infrastructure:
   - Proxmox:
       href: https://10.0.0.30:8006
