@@ -30,8 +30,7 @@ spec:
       stopAll: false
     service:
       vpn:
-        loadBalancerIP: 10.0.0.177
-        type: LoadBalancer
+        type: ClusterIP
         externalTrafficPolicy: Local
     ingress:
       main:
