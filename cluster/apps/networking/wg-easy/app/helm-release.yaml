@@ -40,7 +40,7 @@ spec:
               - path: /
                 service:
                   identifier: main
-                  port: 51821
+                  port: http
         tls:
           - hosts:
             - vpn.${DOMAIN}
