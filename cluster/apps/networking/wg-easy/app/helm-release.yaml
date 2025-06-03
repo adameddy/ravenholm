@@ -31,7 +31,6 @@ spec:
     service:
       vpn:
         type: ClusterIP
-        externalTrafficPolicy: Local
     ingress:
       main:
         className: traefik
