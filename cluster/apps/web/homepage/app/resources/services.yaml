@@ -5,7 +5,7 @@
       href: https://jellyfin.ravenholm.io
       description: Movie & TV Show Streaming
       siteMonitor: http://jellyfin.media.svc.cluster.local:8096
-      statusStyle: "basic"
+      statusStyle: "dot"
   - Navidrome:
       icon: navidrome.png
       href: https://navidrome.ravenholm.io
