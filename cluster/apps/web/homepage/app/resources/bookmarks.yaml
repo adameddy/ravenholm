@@ -1,9 +1,5 @@
 ---
-- Media:
-    - YouTube:
-        - icon: youtube.png
-          href: 'https://youtube.com/feed/subscriptions'
-- Git:
+- Bookmarks:
     - kubesearch:
         - icon: kubernetes-dashboard.png
           href: 'https://kubesearch.dev/'
