@@ -1,3 +1,4 @@
 ---
 - greeting:
+    text_size: 3xl
     text: Ravenholm

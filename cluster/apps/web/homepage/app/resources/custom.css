@@ -13,7 +13,7 @@
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }
 
-#widgets-wrap {
-    font-weight: 100;
+.text-3xl {
     font-size: 3.0rem;
+    font-weight: 100;
 }
