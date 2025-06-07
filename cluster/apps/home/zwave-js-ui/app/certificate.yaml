@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: zwave-js-ui-ingress-certificate
+  namespace: home
+spec:
+  secretName: zwave-js-ui-certificate-secret
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  dnsNames: 
+    - zwave-js-ui.${DOMAIN}
