@@ -85,9 +85,8 @@ spec:
         globalMounts:
           - path: /usr/src/app/store
       usb:
-        enabled: true
         type: hostPath
-        hostPath: /dev/bus/usb
-        hostPathType: Directory
+        hostPath: /dev/zwave800
+        hostPathType: CharDevice
         globalMounts:
-          - path: /dev/bus/usb
+          - path: /dev/zwave800
