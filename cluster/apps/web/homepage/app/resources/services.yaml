@@ -59,7 +59,7 @@
         icon: z-wave-js-ui.png
         href: https://zwave-js-ui.ravenholm.io
         description: Z-Wave Device Management
-        siteMonitor: http://zwave-js-ui.home.svc.cluster.local:5000
+        siteMonitor: http://zwave-js-ui.home.svc.cluster.local:8091
         statusStyle: "dot"
 - Utilities:
   - Grafana:
