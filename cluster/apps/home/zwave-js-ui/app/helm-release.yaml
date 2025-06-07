@@ -86,7 +86,7 @@ spec:
           - path: /usr/src/app/store
       usb:
         type: hostPath
-        hostPath: /dev/zwave800
+        hostPath: /dev/zwave
         hostPathType: CharDevice
         globalMounts:
-          - path: /dev/zwave800
+          - path: /dev/zwave
