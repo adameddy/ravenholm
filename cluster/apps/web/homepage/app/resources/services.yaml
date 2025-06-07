@@ -56,7 +56,7 @@
         siteMonitor: http://frigate.home.svc.cluster.local:5000
         statusStyle: "dot"
   - Z-Wave JS UI:
-        icon: z-wave-js-ui.png.png
+        icon: z-wave-js-ui.png
         href: https://zwave-js-ui.ravenholm.io
         description: Z-Wave Device Management
         siteMonitor: http://zwave-js-ui.home.svc.cluster.local:5000
