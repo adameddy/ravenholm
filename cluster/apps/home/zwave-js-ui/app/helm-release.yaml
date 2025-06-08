@@ -87,6 +87,6 @@ spec:
       usb:
         type: hostPath
         hostPath: /dev/zwave
-        hostPathType: CharDevice
+        #hostPathType: CharDevice
         globalMounts:
           - path: /dev/zwave
