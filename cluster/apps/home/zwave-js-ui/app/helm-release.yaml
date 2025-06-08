@@ -49,6 +49,8 @@ spec:
                   timeoutSeconds: 1
                   failureThreshold: 3
               readiness: *probes
+            securityContext:
+              privileged: true
             resources:
               requests:
                 cpu: 50m
@@ -87,6 +89,6 @@ spec:
       usb:
         type: hostPath
         hostPath: /dev/zwave
-        #hostPathType: CharDevice
+        hostPathType: CharDevice
         globalMounts:
           - path: /dev/zwave
