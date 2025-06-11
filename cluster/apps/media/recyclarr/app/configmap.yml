@@ -4,7 +4,7 @@ metadata:
   name: recyclarr-configmap
   namespace: media
 data:
-  config.yml: |
+  recyclarr.yml: |
     sonarr:
       sonarr_main:
         base_url: http://sonarr.media.svc.cluster.local:8989
