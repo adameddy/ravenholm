@@ -53,15 +53,22 @@ spec:
             - mkdocs.${DOMAIN}
             secretName: mkdocs-certificate-secret
     persistence:
-      data:
-        type: nfs
-        server: ${FS1_IP}
-        path: /mnt/zpool2/other/mkdocs
-        globalMounts:
-          - path: /docs
-      #config:
-        #type: configMap
-        #name: mkdocs-config
+      #data:
+        #type: nfs
+        #server: ${FS1_IP}
+        #path: /mnt/zpool2/other/mkdocs
         #globalMounts:
-          #- subPath: mkdocs.yml
-          #  path: /docs/mkdocs.yml
+          #- path: /docs
+      config:
+        type: configMap
+        name: mkdocs-config
+        globalMounts:
+          - subPath: mkdocs.yml
+            path: /docs/mkdocs.yml
+      data:
+        type: configMap
+        name: mkdocs-main
+        globalMounts:
+          - subPath: test.md
+            path: /docs/main/test.md
+      

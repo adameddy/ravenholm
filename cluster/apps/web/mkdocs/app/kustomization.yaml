@@ -8,5 +8,9 @@ configMapGenerator:
     namespace: web
     files:
       - mkdocs.yml=./resources/mkdocs.yml
+  - name: mkdocs-main
+    namespace: web
+    files:
+      - test.md=./resources/main/test.md
 generatorOptions:
   disableNameSuffixHash: true
