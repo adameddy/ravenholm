@@ -79,7 +79,7 @@ spec:
         existingClaim: navidrome-config-volume
       music:
         type: nfs
-        server: 10.0.0.20
-        path: /mnt/zpool2/audio
+        server: ${FS1_IP}
+        path: ${AUDIO_PATH}
         globalMounts:
           - path: /music
