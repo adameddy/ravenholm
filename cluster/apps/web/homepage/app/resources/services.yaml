@@ -79,11 +79,11 @@
       href: https://10.0.0.30:8006
       icon: https://www.45drives.com/solutions/proxmox/img/proxmox_Logo.png
       description: Virtualization Platform
-  - TrueNAS Fast:
+  - TrueNAS FS-01:
       href: http://10.0.0.10
       icon: truenas.png
       description: Flash Storage
-  - TrueNAS Slow:
+  - TrueNAS FS-02:
       href: http://10.0.0.20
       icon: truenas.png
       description: Archive Storage

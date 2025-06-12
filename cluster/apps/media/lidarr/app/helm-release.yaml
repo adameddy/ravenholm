@@ -89,13 +89,13 @@ spec:
         existingClaim: lidarr-config-volume
       media:
         type: nfs
-        server: 10.0.0.20
-        path: /mnt/zpool2/audio
+        server: ${FS1_IP}
+        path: ${AUDIO_PATH}
         globalMounts:
           - path: /media
       downloads:
         type: nfs
-        server: 10.0.0.20
-        path: /mnt/zpool2/temp/downloads
+        server: ${FS1_IP}
+        path: ${DOWNLOADS_PATH}
         globalMounts:
           - path: /downloads

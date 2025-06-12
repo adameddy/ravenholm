@@ -55,7 +55,7 @@ spec:
     persistence:
       data:
         type: nfs
-        server: 10.0.0.20
+        server: ${FS1_IP}
         path: /mnt/zpool2/other/mkdocs
         globalMounts:
           - path: /docs
