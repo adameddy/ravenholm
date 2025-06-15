@@ -87,6 +87,7 @@ spec:
       tmp:
         type: emptyDir
       usb:
+        enabled: true
         type: hostPath
         hostPath: /dev/zwave
         hostPathType: CharDevice
