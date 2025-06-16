@@ -86,10 +86,17 @@ spec:
           - path: /usr/src/app/store
       tmp:
         type: emptyDir
+      #usb:
+        #enabled: true
+        #type: hostPath
+        #hostPath: /dev/zwave
+        #hostPathType: CharDevice
+        #globalMounts:
+          #- path: /dev/zwave
       usb:
         enabled: true
         type: hostPath
-        hostPath: /dev/zwave
-        hostPathType: CharDevice
+        hostPath: /dev/bus/usb
+        hostPathType: Directory
         globalMounts:
-          - path: /dev/zwave
+          - path: /dev/bus/usb
