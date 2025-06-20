@@ -12,3 +12,4 @@ resources:
   - staker-charts.yaml
   - external-secrets.yaml
   - truecharts.yaml
+  - deschedule.yaml
