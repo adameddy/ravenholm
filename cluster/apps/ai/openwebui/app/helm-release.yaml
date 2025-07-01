@@ -1,8 +1,9 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/bjw-s/helm-charts/main/charts/other/app-template/schemas/helmrelease-helm-v2.schema.json
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: huntarr
-  namespace: media
+  name: &app openwebui
 spec:
   interval: 30m
   chart:
@@ -23,21 +24,14 @@ spec:
       retries: 3
   values:
     controllers:
-      huntarr:
-        pod:
-          securityContext:
-            runAsNonRoot: true
-            runAsUser: 568
-            runAsGroup: 568
-            fsGroup: 568
-            fsGroupChangePolicy: OnRootMismatch
+      *app :
         annotations:
           reloader.stakater.com/auto: "true"
         containers:
           app:
             image:
-              repository: ghcr.io/plexguide/huntarr
-              tag: 8.1.11@sha256:06e39589254837642936300211b3b514a47b2ffd5caba22650583120b05dc34d
+              repository: ghcr.io/open-webui/open-webui
+              tag: v0.6.15@sha256:fda936056184035a71a9ad5ff3721530ff061f16bc3907efb33a3201ba87ccfe
             env:
               TZ: ${TIMEZONE}
             probes:
@@ -46,8 +40,8 @@ spec:
                 custom: true
                 spec:
                   httpGet:
-                    path: /api/health
-                    port: &port 9705
+                    path: /health
+                    port: &port 8080
                   initialDelaySeconds: 0
                   periodSeconds: 10
                   timeoutSeconds: 1
@@ -55,13 +49,17 @@ spec:
               readiness: *probes
             resources:
               requests:
-                cpu: 200m
-                memory: 500Mi
+                cpu: 500m
+                memory: 2Gi
               limits:
-                memory: 1Gi
+                memory: 4Gi
+            securityContext:
+              allowPrivilegeEscalation: false
+              readOnlyRootFilesystem: true
+              capabilities: { drop: [ALL] }
     service:
       app:
-        controller: huntarr
+        controller: *app
         ports:
           http:
             port: *port
@@ -70,7 +68,7 @@ spec:
       app:
         className: traefik
         hosts:
-          - host: huntarr.${DOMAIN}
+          - host: openwebui.${DOMAIN}
             paths:
               - path: /
                 service:
@@ -78,8 +76,10 @@ spec:
                   port: http
         tls:
           - hosts:
-            - huntarr.${DOMAIN}
-            secretName: huntarr-certificate-secret
+            - openwebui.${DOMAIN}
+            secretName: openwebui-certificate-secret
     persistence:
       config:
-        existingClaim: huntarr-config-volume
+        existingClaim: openwebui-config-volume
+        globalMounts:
+          - path: /app/backend/data

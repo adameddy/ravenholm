@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: openwebui-ingress-certificate
+  namespace: ai
+spec:
+  secretName: openwebui-certificate-secret
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  dnsNames: 
+    - openwebui.${DOMAIN}
