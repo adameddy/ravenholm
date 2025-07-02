@@ -62,6 +62,10 @@
         siteMonitor: http://zwave-js-ui.home.svc.cluster.local:8091
         statusStyle: "dot"
 - Utilities:
+  - Open WebUI:
+      href: https://openwebui.ravenholm.io
+      icon: openwebui.png
+      description: AI Chat
   - Grafana:
       href: https://grafana.ravenholm.io
       icon: grafana.png
@@ -91,7 +95,6 @@
       href: https://longhorn.ravenholm.io
       icon: longhorn.png
       description: Cluster Storage
-- Networking:
   - Unifi:
       href: https://10.0.0.1
       icon: unifi.png
