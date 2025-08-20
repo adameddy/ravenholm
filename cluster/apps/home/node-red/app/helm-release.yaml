@@ -40,11 +40,12 @@ spec:
         containers:
           app:
             image:
-              repository: nodered/node-red
+              repository: docker.io/nodered/node-red
               tag: 4.1.0@sha256:da6ac47cce14ed8df7ceddc8a15c8f4c0a41e0836c4d6e68e7a6a82329305a6b
             env:
               TZ: ${TIMEZONE}
               NODE_RED_ENABLE_PROJECTS: "true"
+              NODE_RED_ENABLE_SAFE_MODE: "false"
             probes:
               liveness:
                 enabled: true
