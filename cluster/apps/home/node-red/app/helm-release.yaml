@@ -44,19 +44,14 @@ spec:
               tag: 4.1.0-18-minimal
             env:
               TZ: ${TIMEZONE}
+              NODE_RED_ENABLE_PROJECTS: "true"
             probes:
-              liveness: &probes
+              liveness:
                 enabled: true
-                custom: true
-                spec:
-                  httpGet:
-                    path: /health
-                    port: &port 1880
-                  initialDelaySeconds: 0
-                  periodSeconds: 10
-                  timeoutSeconds: 1
-                  failureThreshold: 3
-              readiness: *probes
+              readiness:
+                enabled: true
+              startup:
+                enabled: true
             resources:
               requests:
                 cpu: 200m
@@ -68,7 +63,7 @@ spec:
         controller: *app
         ports:
           http:
-            port: *port
+            port: 1880
         type: ClusterIP
     ingress:
       app:
