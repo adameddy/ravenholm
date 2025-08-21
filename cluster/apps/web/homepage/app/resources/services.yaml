@@ -59,7 +59,7 @@
         icon: node-red.png
         href: https://node-red.ravenholm.io
         description: Event Triggers
-        siteMonitor: http://node-red.home.svc.cluster.local:8123
+        siteMonitor: http://node-red.home.svc.cluster.local:1880
         statusStyle: "dot"
   - Frigate:
         icon: frigate.png
