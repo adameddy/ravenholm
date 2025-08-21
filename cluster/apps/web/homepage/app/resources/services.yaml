@@ -55,6 +55,12 @@
         description: Home Automation
         siteMonitor: http://home-assistant.home.svc.cluster.local:8123
         statusStyle: "dot"
+  - Node-Red:
+        icon: node-red.png
+        href: https://node-red.ravenholm.io
+        description: Event Triggers
+        siteMonitor: http://node-red.home.svc.cluster.local:8123
+        statusStyle: "dot"
   - Frigate:
         icon: frigate.png
         href: https://frigate.ravenholm.io
