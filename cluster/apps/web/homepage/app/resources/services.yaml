@@ -98,11 +98,7 @@
   - TrueNAS FS-01:
       href: http://10.0.0.10
       icon: truenas.png
-      description: Flash Storage
-  - TrueNAS FS-02:
-      href: http://10.0.0.20
-      icon: truenas.png
-      description: Archive Storage
+      description: General Storage
   - Longhorn:
       href: https://longhorn.ravenholm.io
       icon: longhorn.png
