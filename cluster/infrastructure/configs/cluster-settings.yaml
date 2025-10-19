@@ -8,7 +8,6 @@ data:
   TIMEZONE: America/Denver
   # IP Addresses
   FS1_IP: "10.0.0.10"
-  FS2_IP: "10.0.0.20"
   BLOCKY_IP: "10.0.0.153"
   WG_EASY_IP: "10.0.0.177"
   # Paths
@@ -16,3 +15,4 @@ data:
   MOVIES_PATH: "/mnt/zpool1/movies"
   TVSHOWS_PATH: "/mnt/zpool1/tv-shows"
   DOWNLOADS_PATH: "/mnt/zpool1/temp/downloads"
+  NVR_PATH: "/mnt/zpool4/nvr"

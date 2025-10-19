@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       chart: app-template
-      version: 3.7.3
+      version: 4.4.0
       sourceRef:
         kind: HelmRepository
         name: bjw-s
@@ -34,7 +34,7 @@ spec:
           app:
             image:
               repository: ghcr.io/blakeblackshear/frigate
-              tag: 0.15.1@sha256:c4e02d2c511847eebbda8e0e370b41c78e7b51247353de79340e06c3e95f11be
+              tag: 0.16.2@sha256:4041ad318224500cf9513c513b1bb927d9dd252f63bbd3d11c92006c1172c86c
             env:
               LIBVA_DRIVER_NAME: i965
             probes:
@@ -56,8 +56,9 @@ spec:
               privileged: true
             resources:
               requests:
-                cpu: 250m
+                cpu: 500m
                 memory: 1Gi
+                gpu.intel.com/i915: 1
               limits:
                 memory: 4Gi
                 gpu.intel.com/i915: 1
@@ -103,6 +104,12 @@ spec:
         sizeLimit: 4Gi
         globalMounts:
           - path: /dev/shm
+      media:
+        type: nfs
+        server: ${FS1_IP}
+        path: ${NVR_PATH}
+        globalMounts:
+          - path: /media
       usb:
         enabled: true
         type: hostPath
