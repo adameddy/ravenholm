@@ -16,6 +16,29 @@ detectors:
     type: edgetpu
     device: usb
 
+detect:
+  width: 640
+  height: 480
+  fps: 5
+
+record:
+  enabled: true
+  retain:
+    days: 3
+    mode: active_objects
+  alerts:
+    retain:
+      days: 3
+      mode: active_objects
+  detections:
+    retain:
+      days: 14
+      mode: active_objects
+
+objects:
+  track:
+    - person
+
 cameras:
   front_door:
     enabled: True
@@ -26,7 +49,8 @@ cameras:
           input_args: preset-rtsp-restream
           roles:
             - detect
-    detect:
-      width: 640
-      height: 480
-      fps: 5
+        # High Resolution
+        - path: rtsp://127.0.0.1:8554/front_door_high_res
+          input_args: preset-rtsp-restream
+          roles:
+            - record
