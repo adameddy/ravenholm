@@ -13,9 +13,6 @@ spec:
         kind: HelmRepository
         name: bjw-s
         namespace: flux-system
-      selector:
-        matchLabels:
-          app: frigate
   install:
     remediation:
       retries: 3
