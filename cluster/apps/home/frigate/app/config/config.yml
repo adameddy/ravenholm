@@ -25,11 +25,11 @@ detect:
 record:
   enabled: true
   retain:
-    days: 3
+    days: 14
     mode: active_objects
   alerts:
     retain:
-      days: 3
+      days: 14
       mode: active_objects
   detections:
     retain:
