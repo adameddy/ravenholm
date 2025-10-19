@@ -8,11 +8,14 @@ spec:
   chart:
     spec:
       chart: app-template
-      version: 4.1.2
+      version: 4.4.0
       sourceRef:
         kind: HelmRepository
         name: bjw-s
         namespace: flux-system
+        selector:
+          matchLabels:
+            app: frigate
   install:
     remediation:
       retries: 3
