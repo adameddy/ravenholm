@@ -92,7 +92,7 @@ spec:
     persistence:
       data:
         existingClaim: frigate-config-volume
-      config-file:
+      config:
         enabled: true
         type: configMap
         name: frigate-configmap
