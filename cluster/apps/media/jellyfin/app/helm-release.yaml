@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       chart: app-template
-      version: 3.7.3
+      version: 4.4.0
       sourceRef:
         kind: HelmRepository
         name: bjw-s
@@ -39,7 +39,7 @@ spec:
           app:
             image:
               repository: jellyfin/jellyfin
-              tag: 10.10.7@sha256:7ae36aab93ef9b6aaff02b37f8bb23df84bb2d7a3f6054ec8fc466072a648ce2
+              tag: 10.11.0@sha256:519b02989eafcc4bdb558bdc7014c2395c19608e5c2d7ed99a5f3edd0c75f7ef
             env:
               TZ: America/Denver
             securityContext:
