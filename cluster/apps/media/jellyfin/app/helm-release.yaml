@@ -91,6 +91,11 @@ spec:
     persistence:
       config:
         existingClaim: jellyfin-config-volume
+      tmpfs:
+        enabled: true
+        type: emptyDir
+        globalMounts:
+          - path: /tmp
       transcode:
         enabled: true
         type: emptyDir
