@@ -91,6 +91,16 @@ spec:
     persistence:
       config:
         existingClaim: jellyfin-config-volume
+      transcode:
+        enabled: true
+        type: emptyDir
+        globalMounts:
+          - path: /transcode
+      cache:
+        enabled: true
+        type: emptyDir
+        globalMounts:
+          - path: /cache
       movies:
         type: nfs
         server: ${FS1_IP}
