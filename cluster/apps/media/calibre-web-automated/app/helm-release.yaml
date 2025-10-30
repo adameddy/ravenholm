@@ -9,7 +9,7 @@ spec:
   interval: 1h
   chartRef:
     kind: OCIRepository
-    name: calibre-web-automated
+    name: app-template
   install:
     remediation:
       retries: -1
