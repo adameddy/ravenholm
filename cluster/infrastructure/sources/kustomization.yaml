@@ -13,4 +13,4 @@ resources:
   - external-secrets.yaml
   - truecharts.yaml
   - descheduler.yaml
-  - app-template.yaml
+  - ocirepository.yaml
