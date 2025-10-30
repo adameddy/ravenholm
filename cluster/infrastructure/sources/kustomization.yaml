@@ -13,3 +13,4 @@ resources:
   - external-secrets.yaml
   - truecharts.yaml
   - descheduler.yaml
+  - calibre-web-automated.yaml
